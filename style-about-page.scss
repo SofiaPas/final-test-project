@@ -1,0 +1,139 @@
+.about-page {
+  position: relative;
+}
+
+.about-page .decorative__container::before {
+  content: url("images/about-us-page/Frame.svg");
+  display: inline-block;
+  position: absolute;
+  top: 416px;
+  left: 673px;
+  width: 236.48px;
+  height: 497.44px;
+}
+
+.about-page .decorative__container::after {
+  content: url("images/about-us-page/Frame2.svg");
+  display: inline-block;
+  position: absolute;
+  top: 471px;
+  left: 646px;
+  width: 236.48px;
+  height: 497.44px;
+  z-index: -1;
+}
+
+.about-page .image-container {
+  position: absolute;
+  top: 120px; left: 31px;
+  width: 1139px;
+  height: 362px;
+  background: image-set(
+    url("images/about-us-page/backgr-img1X.jpg") 1x,
+    url("images/about-us-page/backgr-img2X.jpg") 2x
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 220px;
+}
+
+.about-page .image-container::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(360deg, rgba(17, 43, 69, 0.44) 0%, rgba(17, 43, 69, 0) 61.33%);
+  border-radius: 220px;
+  z-index: 1;
+}
+
+.about-page .image-container::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  width: 1088px;
+  height: 218px;
+  background: linear-gradient(90deg, rgba(102, 221, 141), rgba(49, 91, 239));
+  z-index: -1;
+  filter: blur(40px);
+  border-radius: 220px;
+}
+
+.header-2 {
+  font-size: var(--fs-h2);
+  line-height: 57.92px;
+  padding-top: 455px;
+  margin: 0 153px 24px 124px;
+  max-width: 923px;
+  min-width: 288px;
+  position: relative;
+  z-index: 2;
+}
+
+.green {
+  color: rgba(102, 221, 141, 1);
+}
+
+.about-info {
+  margin: 0 653px 20px 124px;
+  max-width: 423px;
+  min-width: 288px;
+}
+
+.about-page .btn-small {
+  margin-left: 124px;
+  margin-top: 12px;
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 480px) {
+  .about-page .decorative__container::before {
+    content: url("images/about-us-page/Frame-mobile.svg");
+    top: 25px;
+    left: 300px;
+    width: auto;
+    height: auto;
+  }  
+  
+  .about-page .decorative__container::after {
+    content: "";
+  }
+
+  .about-page .image-container {
+    position: absolute;
+    top: 64px; left: 16px;
+    width: 288px;
+    height: 160px;
+    background: image-set(
+      url("images/about-us-page/backgr-img-mobile1X.jpg") 1x,
+      url("images/about-us-page/backgr-img-mobile2X.jpg") 2x
+      );
+    background-size: cover;
+    background-position: 100% -16px;
+  }
+
+  .about-page .image-container::after {
+    top: -10px;
+    left: 25px;
+    width: 273px;
+    height: 128px;
+  }
+
+  .header-2 {
+    font-size: 32px;
+    line-height: 28.96px;
+    margin: 24px 0 0 16px;
+    padding-top: 248px;
+    max-width: 288px;
+  }
+
+  .about-info {
+    margin: 24px 0 0 16px;
+    max-width: 288px;
+  }
+
+  .about-page .btn-small {
+    margin: 24px 0 20px 16px;
+  }
+}

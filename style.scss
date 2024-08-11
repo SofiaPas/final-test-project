@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+
+  --ff-ss-h: "Poppins", sans-serif;
+  --ff-ss-b: "Oxygen", sans-serif;
+  --fs-h1: 128px;
+  --fs-h2: 64px;
+  --fw-h: 700;
+  --theme-color: rgba(17, 43, 69, 1);
+
+}
+
+html {
+  box-sizing: border-box;
+  width: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-ss-b);
+  color: #fff;
+  background-color: var(--theme-color);
+}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  font-family: var(--ff-ss-h);
+  font-weight: var(--fw-h);
+  letter-spacing: -0.06em;
+  margin: 0;
+  padding: 0;
+}
+
+.section__header {
+  font-size: var(--fs-h1);
+  line-height: 117.12px;
+}
+
+.btn {
+  font-family: var(--ff-ss-b);
+  font-weight: var(--fw-h);
+  font-size: 16px;
+  background: rgba(49, 91, 239, 1);
+  color: white;
+  border-radius: 36px;
+  padding: 16px 32px;
+  width: 187px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, rgba(19, 50, 160, 1), rgba(50, 143, 81, 1));
+}
+
+.btn:active {
+  background: linear-gradient(to left, rgba(19, 50, 160, 1), rgba(50, 143, 81, 1));
+}
+
+.btn:focus-visible {
+  outline-color: rgba(50, 143, 81, 1);
+}
+
+a:hover {
+  color: rgba(107, 161, 255);
+}
+
+a:active {
+ color: rgba(10, 2, 245);
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .btn {
+    width: 288px;
+  }
+  
+  .section__header {
+    font-size: 48px;
+    line-height: 43.44px;
+  }
+  
+  .header {
+    font-weight: 600; 
+  }
+}
+
+@media (min-width: 1200px)  {
+    body{
+      overflow-x: hidden;
+    }
+  }
