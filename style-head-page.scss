@@ -10,6 +10,7 @@
   height: 736px;
   background-image: url("images/head-page/backgr-img.png");
   background-size: cover;
+  background-position: center;
 }
 
 .head-img-container .overlay {
@@ -29,8 +30,8 @@
 
 .main-menu {
   display: grid;
-  grid-template-columns: 159px 324px;
-  column-gap: 657px;
+  grid-template-columns: repeat(auto-fit, minmax(159px, 1fr));
+  column-gap: 1vw;
   padding-top: 8px;
   margin-bottom: 121px;
   margin-left: 30px;
@@ -40,7 +41,6 @@
 .header-logo {
   height: 104px;
   width: 159px;
-  grid-column-start: 1;
   margin-top: 8px;
 }
 
@@ -51,17 +51,13 @@
   margin-top: 13px;
 }
 
-.nav__list {
+.nav__list.header__nav__list {
   display: flex;
   justify-content: space-between;
   margin: 0;
+  margin-left: auto;
   padding: 0;
   list-style: none;
-}
-
-.header__nav__list {
-  grid-column-start: 2;
-  // margin-top: 13px;
 }
 
 .nav__item {
@@ -159,7 +155,7 @@
     align-items: flex-end;
   }
   
-  #nav__list_toggle:checked + .nav_toggle + .header__nav__list {
+  #nav__list_toggle:checked + .nav_toggle + .nav__list.header__nav__list {
     display: flex;
   }
 

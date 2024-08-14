@@ -36,16 +36,16 @@
                 </label>
                 <ul class="nav__list header__nav__list">
                   <li class="nav__item">
-                    <a class="nav__link" href="#">About</a>
+                    <a class="nav__link" href="#about-page">About</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Services</a>
+                    <a class="nav__link" href="#services-page">Services</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Founder</a>
+                    <a class="nav__link" href="#founder-page">Founder</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Contacts</a>
+                    <a class="nav__link" href="#feedback-page">Contacts</a>
                   </li>
                 </ul>
               </nav>
@@ -63,7 +63,7 @@
         </div>
       </section>
 
-      <section class="about-page">
+      <section class="about-page" id="about-page">
         <div class="decorative__container">
           <div class="image-container"></div>
           <main>
@@ -74,7 +74,7 @@
         </div>
       </section>
 
-      <section class="services-page">
+      <section class="services-page" id="services-page">
         <div class="decorative__container">
           <h1 class="header section__header">Services</h1>
           <ul class="serv__list">
@@ -109,7 +109,7 @@
         </div>
       </section>
 
-      <section class="founder-page">
+      <section class="founder-page" id="founder-page">
         <div class="decorative__container">
           <h1 class="header section__header">Founder</h1>
           <div class="founder__img"></div>
@@ -119,7 +119,7 @@
         </div>
       </section>
 
-      <section class="feedback-page">
+      <section class="feedback-page" id="feedback-page">
         <div class="image-container-feedback">
           <div class="feedback-container">
             <div class="contacts-info">
@@ -129,29 +129,48 @@
             </div>
             <form action="#" method="post" class="feedback-form">
               <h3 class="form__title header">Send <span class="green">a request</span></h3>
-              <input type="text" name="name" placeholder="Name" class="input__area">
-              <input type="text" name="company" placeholder="Company" class="input__area">
-              <input type="tel" name="phone" placeholder="Callback phone number" class="input__area">
-              <span class="datepicker-toggle__area">
-                When is a good time to call
-              <span class="datepicker-toggle-button"></span>
-              <input type="date" class="datepicker-input" name="calltime">
-              </span>
-              <input type="email" name="email" placeholder="Email" class="input__area">
-              <label for="textarea" class="textarea__label">What can we help you with?</label>
-              <textarea id="textarea" name="textarea" rows="1" class="text__area"></textarea>
-              <div class="select__wrapper">
-                <select name="select" class="select__area">
-                  <option value=""  disabled selected>How did you find us?</option>
-                  <option value=""></option>
-                  <option value=""></option>
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="input__area" placeholder="">
+                <label for="name">Name</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="company" name="company" class="input__area" placeholder="">
+                <label for="company">Company</label>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="tel" name="phone" class="input__area" placeholder="">
+                <label for="tel">Callback phone number</label>
+              </div>
+              <div class="form-group">
+                <span class="datepicker-toggle__area">
+                  When is a good time to call
+                <span class="datepicker-toggle-button"></span>
+                <input type="date" class="datepicker-input" name="calltime">
+                </span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="input__area" placeholder="">
+                <label for="email">Email</label>
+              </div>
+              <div class="form-group">
+                <textarea id="textarea" name="textarea" rows="2" class="text__area" placeholder=""></textarea>
+                <label for="textarea" class="textarea__label">What can we help you with?</label>
+              </div>
+              <div class="form-group select__wrapper">
+                <label for="select">How did you find us?</label>
+                <select name="select" id="select" class="select__area">
+                  <option value="" selected disabled></option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
                 </select>
               </div>
-              <label for="checkbox" class="checkbox__container">
-                <input type="checkbox" id="checkbox" class="checkbox" checked>
-                <span class="custom__checkbox"></span>
-                <span class="agreenment">I agree with the personal data processing policy</span>
-              </label>
+              <div class="form-group">
+                <label for="checkbox" class="checkbox__container">
+                  <input type="checkbox" id="checkbox" class="checkbox" checked>
+                  <span class="custom__checkbox"></span>
+                  <span class="agreenment">I agree with the personal data processing policy</span>
+                </label>
+              </div>
               <button class="btn btn-small">Send a request</button>
             </form>
           </div>
@@ -162,16 +181,16 @@
         <div class="upper-part">
           <ul class="nav__list footer__nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">About</a>
+              <a class="nav__link" href="#about-page">About</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Services</a>
+              <a class="nav__link" href="#services-page">Services</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Founder</a>
+              <a class="nav__link" href="#founder-page">Founder</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Contacts</a>
+              <a class="nav__link" href="#feedback-page">Contacts</a>
             </li>
           </ul>
           <div class="socials__box">

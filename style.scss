@@ -3,24 +3,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
-
+  
   --ff-ss-h: "Poppins", sans-serif;
   --ff-ss-b: "Oxygen", sans-serif;
   --fs-h1: 128px;
   --fs-h2: 64px;
   --fw-h: 700;
   --theme-color: rgba(17, 43, 69, 1);
+  --anim-width: 1139px;
+  --anim-height: calc(var(--anim-width) / 3.14);
+  --anim-mob-width: 288px;
+  --anim-mob-height: calc(var(--anim-mob-width) / 1.8);
+}
 
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
 }
 
 html {
   box-sizing: border-box;
   width: auto;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   font-family: var(--ff-ss-b);
   color: #fff;
   background-color: var(--theme-color);
