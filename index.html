@@ -2,219 +2,235 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Sofia Pasechnik">
     <link rel="icon" href="images/favicon-icon.png">
 
-    <link rel="stylesheet" href="style.scss">
-    <link rel="stylesheet" href="style-head-page.scss">
-    <link rel="stylesheet" href="style-about-page.scss">
-    <link rel="stylesheet" href="style-services-page.scss">
-    <link rel="stylesheet" href="style-founder.scss">
-    <link rel="stylesheet" href="style-feedback.scss">
-    <link rel="stylesheet" href="style-footer-part.scss">
+    <link rel="stylesheet" href="scss/style.scss">
     
     <title>Final Project</title>
   </head>
   <body>
     <div class="container">
 
-      <section class="head-page">
-        <div class="head-img-container">
-          <div class="overlay"></div>
-          <div class="content">
-            <div class="main-menu">
-              <a href="#" class="header-logo">
-                <img src="images/head-page/logo-img.png" width="100%" height="100%" alt="Company's Logo">
+      <section class="header">
+        <div class="header__img-container">
+          <div class="header__overlay"></div>
+          <div class="header__content">
+            <div class="header__main-menu">
+              <a href="#">
+                <picture class="header__logo-box">
+                  <source srcset="images/head-page/logo-img.webp" type="image/wedp" class="header__logo">
+                  <img src="images/head-page/logo-img.png" width="159" height="104" alt="Company's Logo" class="header__logo" loading="lazy">
+                </picture>
               </a>
-              <nav class="navbar">
-                <input type="checkbox" id="nav__list_toggle" class="nav__list_checkbox">
-                <label for="nav__list_toggle" class="nav_toggle">
+              <nav class="header__navbar">
+                <input type="checkbox" id="nav__list_toggle" class="header__nav-list_checkbox">
+                <label for="nav__list_toggle" class="header__nav-toggle">
                   ☰
                 </label>
-                <ul class="nav__list header__nav__list">
-                  <li class="nav__item">
-                    <a class="nav__link" href="#about-page">About</a>
+                <ul class="header__nav-list">
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#about">About</a>
                   </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#services-page">Services</a>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#services">Services</a>
                   </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#founder-page">Founder</a>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#founder">Founder</a>
                   </li>
-                  <li class="nav__item">
-                    <a class="nav__link" href="#feedback-page">Contacts</a>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#feedback">Contacts</a>
                   </li>
                 </ul>
               </nav>
             </div>
-            <div class="main-part">
-              <h3 class="header header-3">Cloud software development</h3>
-              <ul class="head-page_features">
-                <li class="head-page_feature__item">Websites, mobile applications</li>
-                <li class="head-page_feature__item">Remote development teams</li>
-                <li class="head-page_feature__item">Cloud Infrastructure Management </li>
-              </ul>
-              <button class="btn btn_small">Send a request</button>
+            <div class="header__lower-part">
+              <h1 class="base-title header__title">Cloud software development</h1>
+              <div class="header__features-block">
+                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark mark-1" loading="lazy">
+                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark mark-2" loading="lazy">
+                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark mark-3" loading="lazy">
+                <ul class="header__features-list">
+                  <li class="header__feature-item item-1">Websites, mobile applications</li>
+                  <li class="features__list__item item-2">Remote development teams</li>
+                  <li class="features__list__item item-3">Cloud Infrastructure Management </li>
+                </ul>
+              </div>
+              <button class="base-btn header__btn">Send a request</button>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="about-page" id="about-page">
-        <div class="decorative__container">
-          <div class="image-container"></div>
-          <main>
-            <h2 class="header header-2">Basic marketing information <span class="green">about the company</span></h2>
-            <p class="about-info">Basic marketing info about the company: We deliver customized cloud based solutions for your ideas. 20 years of high performance cloud based development experience (that’s my experience incl. Google and Gemini).</p>
-            <button class="btn btn-small">Send a request</button>
-          </main>
+      <section class="about" id="about">
+        <div class="about__decorative-container">
+          <div class="about__image-container"></div>
+          <h2 class="base-title about__title">Basic marketing information <span class="green-part">about the company</span></h2>
+          <p class="about__main-text">Basic marketing info about the company: We deliver customized cloud based solutions for your ideas. 20 years of high performance cloud based development experience (that’s my experience incl. Google and Gemini).</p>
+          <button class="base-btn about__btn">Send a request</button>
         </div>
       </section>
 
-      <section class="services-page" id="services-page">
-        <div class="decorative__container">
-          <h1 class="header section__header">Services</h1>
-          <ul class="serv__list">
-            <div class="serv__item-box first">
-              <li class="serv__item first">
-                <h4 class="header serv__header">Cloud based development</h4>
-                <p class="serv-content">Develop an app for your project: web 
+      <section class="services" id="services">
+        <div class="services__decorative-container">
+          <h2 class="base-title section-header">Services</h2>
+          <ul class="services__serv-list">
+
+            <li class="services__card-box first">
+              <div class="services__card first">
+                <img src="/images/services-page/Data.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
+                <h3 class="base-title services__card-title">Cloud based development</h3>
+                <p class="services__card-descr">Develop an app for your project: web 
                   and mobile apps for your custom business needs on Amazon Web Services, Google Cloud Platform  or your private cloud.
                 </p>
-                <button class="btn btn-big first">Send a request</button>
-              </li>
-            </div>
-            <div class="serv__item-box second">
-              <li class="serv__item second">
-                <h4 class="header serv__header">Remote development teams</h4>
-                <p class="serv-content">Manage and improve your services with
+                <button class="base-btn services__btn first">Send a request</button>
+              </div>
+            </li>
+
+            <li class="services__card-box second">
+              <div class="services__card second">
+                <img src="/images/services-page/Window-code-block.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
+                <h3 class="base-title services__card-title">Remote development teams</h3>
+                <p class="services__card-descr">Manage and improve your services with
                   a dedicated development team that covers all functions. You only need to define the tasks and priorities, we are doing the rest.
                 </p>
-                <button class="btn btn-big second">Send a request</button>
-              </li>
-            </div>
-            <div class="serv__item-box third">
-              <li class="serv__item third">
-                <h4 class="header serv__header">Infrastructure management</h4>
-                <p class="serv-content third">We monitor your services <br>
+                <button class="base-btn services__btn second">Send a request</button>
+              </div>
+            </li>
+
+            <li class="services__card-box third">
+              <div class="services__card third">
+                <img src="/images/services-page/Clock.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
+                <h3 class="base-title services__card-title third">Infrastructure management</h3>
+                <p class="services__card-descr third">We monitor your services <br>
                   and keep them running 24/7
                 </p>
-                <button class="btn btn-big third">Send a request</button>
-              </li>
-            </div>
+                <button class="base-btn services__btn third">Send a request</button>
+              </div>
+            </li>
+
           </ul>
         </div>
       </section>
 
-      <section class="founder-page" id="founder-page">
-        <div class="decorative__container">
-          <h1 class="header section__header">Founder</h1>
-          <div class="founder__img"></div>
-          <p class="founder-content">Balazs, 20 years experience in cloud development, 
+      <section class="founder" id="founder">
+        <div class="founder__decorative-container">
+          <h2 class="base-title section-header">Founder</h2>
+          <picture class="founder__img-box">
+            <source srcset="/images/founder-page/Founder@2X.webp" type="image/webp" class="founder__img">
+            <source srcset="/images/founder-page/Founder@1X.webp" type="image/webp" class="founder__img">
+            <img src="/images/founder-page/Founder@1X.jpg" alt="Founder img" width="500" heigth="419" class="founder__img" loading="lazy">
+          </picture>
+          <p class="founder__main-text">Balazs, 20 years experience in cloud development, 
             leader and contributor of many projects with billions 
-            of users as a senior Google</p>
+            of users as a senior Google
+          </p>
         </div>
       </section>
 
-      <section class="feedback-page" id="feedback-page">
-        <div class="image-container-feedback">
-          <div class="feedback-container">
-            <div class="contacts-info">
-              <h1 class="header section__header">Contacts</h1>
-              <p class="contacts-email header">1@dlux.services</p>
-              <p class="contacts-phone header">+18143511265</p>
+      <section class="feedback" id="feedback">
+        <div class="feedback__image-container">
+          <div class="feedback__container">
+            <div class="feedback__contacts-info">
+              <h2 class="base-title section-header">Contacts</h2>
+              <p class="base-title feedback__cont-email">1@dlux.services</p>
+              <p class="base-title feedback__cont-phone">+18143511265</p>
             </div>
-            <form action="#" method="post" class="feedback-form">
-              <h3 class="form__title header">Send <span class="green">a request</span></h3>
-              <div class="form-group">
-                <input type="text" id="name" name="name" class="input__area" placeholder="">
+            <form action="#" method="post" class="feedback__form form">
+              <h3 class="base-title form__title">Send <span class="green-part">a request</span></h3>
+              <div class="form__group">
+                <input type="text" id="name" name="name" class="form__input-area" placeholder="">
                 <label for="name">Name</label>
               </div>
-              <div class="form-group">
-                <input type="text" id="company" name="company" class="input__area" placeholder="">
+              <div class="form__group">
+                <input type="text" id="company" name="company" class="form__input-area" placeholder="">
                 <label for="company">Company</label>
               </div>
-              <div class="form-group">
-                <input type="tel" id="tel" name="phone" class="input__area" placeholder="">
+              <div class="form__group">
+                <input type="tel" id="tel" name="phone" class="form__input-area" placeholder="">
                 <label for="tel">Callback phone number</label>
               </div>
-              <div class="form-group">
-                <span class="datepicker-toggle__area">
+              <div class="form__group">
+                <span class="form__datepicker-toggle-area">
                   When is a good time to call
-                <span class="datepicker-toggle-button"></span>
-                <input type="date" class="datepicker-input" name="calltime">
+                <span class="form__datepicker-toggle-button"></span>
+                <input type="date" class="form__datepicker-input" name="calltime">
                 </span>
               </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" class="input__area" placeholder="">
+              <div class="form__group">
+                <input type="email" id="email" name="email" class="form__input-area" placeholder="">
                 <label for="email">Email</label>
               </div>
-              <div class="form-group">
-                <textarea id="textarea" name="textarea" rows="2" class="text__area" placeholder=""></textarea>
-                <label for="textarea" class="textarea__label">What can we help you with?</label>
+              <div class="form__group">
+                <textarea id="textarea" name="textarea" rows="2" class="form__text-area" placeholder=""></textarea>
+                <label for="textarea" class="form__textarea-label">What can we help you with?</label>
               </div>
-              <div class="form-group select__wrapper">
+              <div class="form__group form__select-wrapper">
                 <label for="select">How did you find us?</label>
-                <select name="select" id="select" class="select__area">
+                <select name="select" id="select" class="form__select-area">
                   <option value="" selected disabled></option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="checkbox" class="checkbox__container">
-                  <input type="checkbox" id="checkbox" class="checkbox" checked>
-                  <span class="custom__checkbox"></span>
-                  <span class="agreenment">I agree with the personal data processing policy</span>
+              <div class="form__group">
+                <label for="checkbox" class="form__checkbox-container">
+                  <input type="checkbox" id="checkbox" class="form__checkbox" checked>
+                  <span class="form__checkbox-custom"></span>
+                  <span class="form__agreement">I agree with the personal data processing policy</span>
                 </label>
               </div>
-              <button class="btn btn-small">Send a request</button>
+              <button class="base-btn form__btn">Send a request</button>
             </form>
           </div>
         </div>
       </section>
 
-      <section class="footer-page">
-        <div class="upper-part">
-          <ul class="nav__list footer__nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#about-page">About</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#services-page">Services</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#founder-page">Founder</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#feedback-page">Contacts</a>
-            </li>
-          </ul>
-          <div class="socials__box">
-            <h4 class="socials__header header">Social media</h4>
-            <ul class="socials__list">
-              <li class="social__item fb"></li>
-              <li class="social__item inst"></li>
-              <li class="social__item tw"></li>
-              <li class="social__item in"></li>
-              <li class="social__item tg"></li>
-              <li class="social__item wp"></li>
+      <section class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__upper-part">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#about">About</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#services">Services</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#founder">Founder</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#feedback">Contacts</a>
+              </li>
+            </ul>
+            <div class="footer__socials-box">
+              <h4 class="footer__socials-header base-title">Social media</h4>
+              <ul class="footer__socials-list">
+                <li class="footer__social-item fb"><img src="images/footer-page/facebook.svg" alt="fb icon" width="24" height="24" class="footer__icon icon-fb" loading="lazy"></li>
+                <li class="footer__social-item inst"><img src="images/footer-page/instagram.svg" alt="inst icon" width="24" height="24" class="footer__icon icon-inst" loading="lazy"></li>
+                <li class="footer__social-item tw"><img src="images/footer-page/twitter.svg" alt="tw icon" width="24" height="24" class="footer__icon icon-tw" loading="lazy"></li>
+                <li class="footer__social-item in"><img src="images/footer-page/linkedin.svg" alt="in icon" width="24" height="24" class="footer__icon icon-in" loading="lazy"></li>
+                <li class="footer__social-item tg"><img src="images/footer-page/telegram.svg" alt="tg icon" width="24" height="24" class="footer__icon icon-tg" loading="lazy"></li>
+                <li class="footer__social-item wp"><img src="images/footer-page/whatsapp.svg" alt="wp icon" width="24" height="24" class="footer__icon icon-wp" loading="lazy"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__lower-part">
+            <a href="#">
+              <picture class="footer__logo-box">
+                <source srcset="images/footer-page/logo-footer-img.webp" type="image/wedp" class="footer__logo">
+                <img src="images/footer-page/logo-footer-img.png" width="249" height="125" alt="Company's Logo" class="footer__logo" loading="lazy">
+              </picture>
+            </a>
+            <p class="footer__main-text base-title">20 years of high performance <span class="green-part">cloud based development</span> experience</p>
+            <ul class="footer__policy-terms">
+              <li class="footer__term term-1"><a class="footer__term-link" href="#">Privacy Policy</a></li>
+              <li class="footer__term term-2"><a class="footer__term-link" href="#">Rules for the processing of personal data</a></li>
+              <li class="footer__term term-3"><a class="footer__term-link" href="#">Website Terms of Use</a></li>
             </ul>
           </div>
-        </div>
-        <div class="lower-part">
-          <a href="#" class="footer-logo__link">
-            <img src="images/footer-page/logo-footer-img.png" alt="Company's Logo" class="footer-logo">
-          </a>
-          <p class="main-text header">20 years of high performance <span class="green">cloud based development</span> experience</p>
-          <ul class="policy-terms">
-            <li class="term term-1"><a class="term__link" href="#">Privacy Policy</a></li>
-            <li class="term term-2"><a class="term__link" href="#">Rules for the processing of personal data</a></li>
-            <li class="term term-3"><a class="term__link" href="#">Website Terms of Use</a></li>
-          </ul>
         </div>
       </section>
     </div>

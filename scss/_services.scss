@@ -1,0 +1,146 @@
+.services {
+  position: relative;
+
+  .services__decorative-container::before {
+    content: url("/images/services-page/Frame.svg");
+    display: inline-block;
+    position: absolute;
+    top: 135px;
+    left: 635px;
+    width: 570px;
+    height: 366px;
+  }
+
+  .section-header {
+    position: relative;
+    top: 101px;
+    left: 124px;
+    z-index: 5;
+    width: max-content;
+  }
+
+  .services__serv-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 75px 30px 99px 30px;
+  }
+
+  .services__card-box {
+    display: grid;
+    place-items: center;
+    margin-right: 8px;
+    border-radius: 24px;
+  }
+
+  .services__card-box.second {
+    z-index: 10;
+    backdrop-filter: blur(20px);
+  }
+
+  .services__card-box:last-child {
+    margin-right: 0;
+  }
+
+  .services__card {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 24px;
+    padding: 30px;
+    border-radius: 24px;
+    background: var(--serv__card-bgcolor);
+    min-width: min-content;
+  }
+
+  .services__card-img {
+    margin-bottom: 71px;
+  }
+
+  .services__card-title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 21.96px;
+  }
+
+  .services__card-title.third {
+    text-wrap: nowrap;
+  }
+
+  .services__card-descr {
+    margin: 0;
+  }
+
+  .services__card-descr.third {
+    margin-bottom: 41px;
+  }
+
+  .services__btn.first {
+    width: 305px;
+  }
+
+  .services__btn.second {
+    width: 332px;
+  }
+
+  .services__btn.third {
+    width: 316px;
+  }
+
+
+  @media only screen and (max-width: 480px) {
+    .services__decorative-container::before {
+      content: url("/images/services-page/Frame-mobile.svg");
+      top: 45px;
+      left: 185px;
+      width: 248px;
+      height: 144px;
+    }
+
+    .section-header {
+      top: 36px;
+      left: 16px;
+      position: relative;
+      margin-bottom: 0px;
+    }
+
+    .services__serv-list {
+      flex-direction: column;
+      margin: 55px 16px 16px 16px;
+    }
+    
+    .services__card-box {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+    
+    .services__card-box.second {
+      z-index: unset;
+      backdrop-filter: unset;
+    }
+
+    .services__card {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      padding: 16px;
+      max-width: min-content;
+    }
+    
+    .services__card-img {
+      margin-bottom: 32px;
+    }
+    
+    .services__card-title.third {
+      text-wrap: wrap;
+    }
+    
+    .services__card-descr.third {
+      margin-bottom: 0;
+    }
+
+    .services__btn.first,
+    .services__btn.second,
+    .services__btn.third {
+      width: 256px;
+    }
+  }
+}
