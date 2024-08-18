@@ -1,0 +1,12 @@
+.base-link {
+  color: var(--text-color);
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(107, 161, 255);
+  }
+  
+  &:active {
+   color: rgba(10, 2, 245);
+  }
+}

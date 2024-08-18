@@ -1,0 +1,10 @@
+.section-header {
+  font-size: var(--primary-header-size);
+  line-height: 0.9;
+
+  @media only screen and (max-width: 480px) {
+    & {
+      font-size: 48px;
+    } 
+  }
+}

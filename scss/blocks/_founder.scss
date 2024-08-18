@@ -1,0 +1,77 @@
+.founder {
+  position: relative;
+  height: 599px;
+  
+  &__decorative-container::before {
+    content: url("/images/founder-page/Frame.svg");
+    display: inline-block;
+    position: absolute;
+    top: 347px;
+    left: 467px;
+    width: 291px;
+    height: 55px;
+  }
+  
+  &__section-header {
+    position: absolute;
+    top: 193px;
+    left: 578px;
+  }
+
+  &__img-box {
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: 30px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__img {
+    border-radius: 24px;
+    max-width: 100%;
+  }
+
+  &__main-text {
+    position: absolute;
+    top: 331px;
+    left: 790px;
+    max-width: 378px;
+  }
+  
+
+  @media only screen and (max-width: 480px) {
+    & {
+      height: 419px;
+      margin: 0 16px 0 16px;
+    }
+    
+    &__decorative-container::before {
+      content: none;
+    }
+    
+    &__section-header {
+      position: absolute;
+      top: 36px;
+      left: unset;
+    }
+    
+    &__img-box {
+      top: 191px;
+      left: unset;
+      max-width: 288px;
+      height: 180px;
+      background-size: cover;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+    
+    &__main-text {
+      margin: 0;
+      position: absolute;
+      top: 87px;
+      left: unset;
+      max-width: 265px;
+    }
+  }
+}

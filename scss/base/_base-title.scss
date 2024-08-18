@@ -1,0 +1,13 @@
+.base-title {
+  font-family: var(--primary-font-fam);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  margin: 0;
+  padding: 0;
+
+  @media only screen and (max-width: 480px) {
+    & {
+      font-weight: 600; 
+    }
+  }
+}

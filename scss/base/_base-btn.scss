@@ -1,0 +1,33 @@
+.base-btn {
+  font-family: var(--primary-font-fam);
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 36px;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  transition: all 0.3s;
+
+  &:hover {
+    background: linear-gradient(to right, rgba(19, 50, 160, 1), rgba(50, 143, 81, 1));
+  }
+  
+  &:active {
+    background: linear-gradient(to left, rgba(19, 50, 160, 1), rgba(50, 143, 81, 1));
+  }
+  
+  &:focus-visible {
+    outline-color: rgba(50, 143, 81, 1);
+  }
+
+  @media only screen and (max-width: 480px) {
+    & {
+      width: 288px;
+    }
+  }
+}

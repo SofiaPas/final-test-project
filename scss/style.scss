@@ -2,14 +2,12 @@
 // @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-
 :root {
   --primary-font-fam: "Poppins", sans-serif;
   --secondary-font-fam: "Oxygen", sans-serif;
   --tertiary-font-fam: "Manrope", sans-serif;
   --primary-header-size: 128px;
   --secondary-header-size: 64px;
-  --primary-font-w-header: 700;
   --text-color: rgba(255, 255, 255);
   --background-color: rgba(17, 43, 69, 1);
   --primary-color: rgba(49, 91, 239, 1);
@@ -17,132 +15,31 @@
   --serv-card-bg-color: rgba(25, 63, 102, 0.32);
 }
 
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url('fonts/Poppins');
-}
-@font-face {
-  font-family: "Oxygen", sans-serif;
-  src: url('fonts/Oxygen');
-}
-@font-face {
-  font-family: "Manrope", sans-serif;
-  src: url('fonts/Manrope');
-}
-
-@import "header.scss";
-@import "about.scss";
-@import "services.scss";
-@import "founder.scss";
-@import "feedback.scss";
-@import "form.scss";
-@import "footer.scss";
-
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
   inherits: false;
 }
+//blocks
+@import 'scss/blocks/_header.scss';
+@import 'scss/blocks/_about.scss';
+@import 'scss/blocks/_services.scss';
+@import 'scss/blocks/_founder.scss';
+@import 'scss/blocks/_feedback.scss';
+@import 'scss/blocks/_form.scss';
+@import 'scss/blocks/_footer.scss';
 
-html {
-  box-sizing: border-box;
-  width: auto;
-  scroll-behavior: smooth;
-}
+//classes
+@import 'scss/common/_common-html.scss';
+@import 'scss/common/_common-body.scss';
+@import 'scss/common/_common-fonts.scss';
+@import 'scss/common/_common-section-header.scss';
+@import 'scss/common/_common-container.scss';
 
-.body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: var(--secondary-font-fam);
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
+//base
+@import 'scss/base/_base-title.scss';
+@import 'scss/base/_base-btn.scss';
+@import 'scss/base/_base-link.scss';
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.base-title {
-  font-family: var(--primary-font-fam);
-  font-weight: var(--primary-font-w-header);
-  letter-spacing: -0.06em;
-  margin: 0;
-  padding: 0;
-}
-
-.section-header {
-  font-size: var(--primary-header-size);
-  line-height: 0.9;
-}
-
-.base-btn {
-  font-family: var(--primary-font-fam);
-  font-weight: var(--primary-font-w-header);
-  display: inline-block;
-  text-align: center;
-  font-size: 16px;
-  background: var(--primary-color);
-  color: var(--text-color);
-  border-radius: 36px;
-  padding: 16px 32px;
-  border: none;
-  cursor: pointer;
-  line-height: 1.5;
-  transition: all 0.3s;
-}
-
-
-.base-btn:hover {
-  background: linear-gradient(to right, rgba(19, 50, 160, 1), rgba(50, 143, 81, 1));
-}
-
-.base-btn:active {
-  background: linear-gradient(to left, rgba(19, 50, 160, 1), rgba(50, 143, 81, 1));
-}
-
-.base-btn:focus-visible {
-  outline-color: rgba(50, 143, 81, 1);
-}
-
-.green-part {
-  color: var(--secondary-color);
-}
-
-.base-link {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.base-link:hover {
-  color: rgba(107, 161, 255);
-}
-
-.base-link:active {
- color: rgba(10, 2, 245);
-}
-
-@media only screen and (max-width: 480px) {
-  .body {
-    overflow-x: hidden;
-  }
-
-  .base-btn {
-    width: 288px;
-  }
-  
-  .section-header {
-    font-size: 48px;
-  }
-  
-  .base-title {
-    font-weight: 600; 
-  }
-}
-
-@media (min-width: 1200px)  {
-  .body{
-    overflow-x: hidden;
-  }
-}
+//utilities
+@import 'scss/utilities/_utilities-green-part.scss';
