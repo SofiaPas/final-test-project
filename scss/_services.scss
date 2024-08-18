@@ -1,7 +1,7 @@
 .services {
   position: relative;
 
-  .services__decorative-container::before {
+  &__decorative-container::before {
     content: url("/images/services-page/Frame.svg");
     display: inline-block;
     position: absolute;
@@ -19,76 +19,76 @@
     width: max-content;
   }
 
-  .services__serv-list {
+  &__serv-list {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 75px 30px 99px 30px;
   }
 
-  .services__card-box {
+  &__card-box {
     display: grid;
     place-items: center;
     margin-right: 8px;
     border-radius: 24px;
   }
 
-  .services__card-box.second {
+  &__card-box.second {
     z-index: 10;
     backdrop-filter: blur(20px);
   }
 
-  .services__card-box:last-child {
+  &__card-box:last-child {
     margin-right: 0;
   }
 
-  .services__card {
+  &__card {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     gap: 24px;
     padding: 30px;
     border-radius: 24px;
-    background: var(--serv__card-bgcolor);
+    background: var(--serv-card-bg-color);
     min-width: min-content;
   }
 
-  .services__card-img {
+  &__card-img {
     margin-bottom: 71px;
   }
 
-  .services__card-title {
+  &__card-title {
     margin: 0;
     font-size: 24px;
-    line-height: 21.96px;
+    line-height: 0.9;
   }
 
-  .services__card-title.third {
+  &__card-title.third {
     text-wrap: nowrap;
   }
 
-  .services__card-descr {
+  &__card-descr {
     margin: 0;
   }
 
-  .services__card-descr.third {
+  &__card-descr.third {
     margin-bottom: 41px;
   }
 
-  .services__btn.first {
+  &__btn.first {
     width: 305px;
   }
 
-  .services__btn.second {
+  &__btn.second {
     width: 332px;
   }
 
-  .services__btn.third {
+  &__btn.third {
     width: 316px;
   }
 
 
   @media only screen and (max-width: 480px) {
-    .services__decorative-container::before {
+    &__decorative-container::before {
       content: url("/images/services-page/Frame-mobile.svg");
       top: 45px;
       left: 185px;
@@ -103,43 +103,43 @@
       margin-bottom: 0px;
     }
 
-    .services__serv-list {
+    &__serv-list {
       flex-direction: column;
       margin: 55px 16px 16px 16px;
     }
     
-    .services__card-box {
+    &__card-box {
       margin-right: 0;
       margin-bottom: 24px;
     }
     
-    .services__card-box.second {
+    &__card-box.second {
       z-index: unset;
       backdrop-filter: unset;
     }
 
-    .services__card {
+    &__card {
       display: grid;
       grid-template-rows: auto auto 1fr auto;
       padding: 16px;
       max-width: min-content;
     }
     
-    .services__card-img {
+    &__card-img {
       margin-bottom: 32px;
     }
     
-    .services__card-title.third {
+    &__card-title.third {
       text-wrap: wrap;
     }
     
-    .services__card-descr.third {
+    &__card-descr.third {
       margin-bottom: 0;
     }
 
-    .services__btn.first,
-    .services__btn.second,
-    .services__btn.third {
+    &__btn.first,
+    &__btn.second,
+    &__btn.third {
       width: 256px;
     }
   }

@@ -1,6 +1,6 @@
 .feedback {
 
-  .feedback__image-container {
+  &__image-container {
     background-image: image-set(
       url("/images/feedback-page/clouds-img@1X.png") 1x,
       url("/images/feedback-page/clouds-img@2X.png") 2x,
@@ -10,189 +10,33 @@
     background-repeat: no-repeat;
   }
 
-  .feedback__container {
+  &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 30px 100px 30px;
     padding-top: 120px;
   }
 
-  .feedback__contacts-info {
+  &__contacts-info {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
 
-  .feedback__contacts-info [class*="cont-"] {
+  &__contacts-info [class*="cont-"] {
     margin: 0;
-    font-size: 64px;
-    line-height: 58.56px;
+    font-size: var(--secondary-header-size);
+    line-height: 0.9;
     margin-bottom: 32px;
   }
 
-  .feedback__cont-phone {
+  &__cont-phone {
     margin-bottom: 0;
   }
 
   .section-header {
     margin-bottom: 64px;
-  }
-
-  .feedback__form.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    width: 559px;
-    height: 743px;
-    background: rgba(104, 104, 104, 0.26);
-    border-radius: 32px;
-    padding: 32px 32px 27px 32px;
-    position: relative;
-    backdrop-filter: blur(5px);
-    box-sizing: border-box;
-  }
-
-  .form__title {
-    font-size: 64px;
-    margin-bottom: 12px;
-    line-height: 58.56px;
-  }
-
-  .form__group {
-    position: relative;
-    margin-bottom: 24px;
-  }
-
-  .feedback__form [class$="-area"] {
-    font-family: "Manrope", sans-serif;
-    font-size: 24px;
-    line-height: 30.3px;
-    margin-right: 10px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(235, 235, 235, 1);
-    color: #fff;
-    width: 485px;
-    padding-bottom: 5px;
-    box-sizing: border-box;
-  }
-
-  .form__group label {
-    position: absolute;
-    top: 0; left: 0;
-    font-family: "Manrope", sans-serif;
-    font-size: 24px;
-    color: #fff;
-    transition: 0.2s ease all;
-  }
-
-  [class$="-area"]:focus ~ label,
-  [class$="-area"]:not(:placeholder-shown) ~ label {
-    top: -10px;
-    font-size: 0.75em;
-    color: #fff;
-  }
-
-  [class$="-area"]:focus {
-    outline: none;
-  }
-
-  .form__datepicker-toggle-area {
-    display: inline-block;
-    position: relative;
-  }
-
-  .form__datepicker-toggle-button {
-    position: absolute;
-    left: 95%;
-    top: 0;
-    width: 24px;
-    height: 24px;
-    background-image: url("/images/feedback-page/Calendar_Week.svg");
-  }
-
-  .form__datepicker-input {
-    position: absolute;
-    left: 60%;
-    top: 0;
-    width: 40%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-
-  .form__datepicker-input::-webkit-calendar-picker-indicator {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .form__text-area {
-    resize: none;
-    overflow: auto;
-  }
-
-  .form__select-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .form__select-wrapper::after {
-    content: url("/images/feedback-page/Caret_Down.svg");
-    position: absolute;
-    top: 10%;
-    left: 95%;
-    pointer-events: none;
-  }
-
-  .form__select-area {
-    appearance: none;
-    position: relative;
-  }
-
-  .form__select-area:focus {
-    outline: none;
-  }
-
-  .form__checkbox-container {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    cursor: pointer;
-  }
-
-  .form__checkbox-container input[type="checkbox"] {
-    display: none;
-  }
-
-  .form__checkbox-container .form__checkbox-custom {
-    height: 16px;
-    width: 16px;
-    background-image: url("/images/feedback-page/Square.svg");
-    background-size: cover;
-    margin: 4px;
-  }
-
-  .form__checkbox-container input[type="checkbox"]:checked + .form__checkbox-custom {
-    background-image: url("/images/feedback-page/Square_Check.svg");
-  }
-
-  .form__checkbox-container .form__agreement {
-    margin-left: 8px;
-    font-size: 14px;
-    line-height: 17.68px;
-    align-self: center;
-  }
-
-  .form__btn {
-    margin-top: 17px;
   }
 
 
@@ -201,99 +45,21 @@
       display: none;
     }
 
-    .feedback__container {
+    &__container {
       display: flex;
       flex-direction: column;
       margin: 53px 16px 0px 16px;
       padding-top: 0;
     } 
 
-    .feedback__contacts-info {
+    &__contacts-info {
       margin-bottom: 24px;
       margin-left: 57px;
     }
     
-    .feedback__contacts-info [class*="cont-"] {
+    &__contacts-info [class*="cont-"] {
       font-size: 24px;
-      line-height: 21.96px;
       margin-bottom: 13px;
-    }
-
-    .feedback__form.form {
-      justify-content: flex-start;
-      width: 288px;
-      min-width: 288px;
-      height: 505px;
-      border-radius: 24px;
-      padding: 16px;
-      margin-bottom: 33px;
-    }
-    
-    .form__title {
-      font-size: 32px;
-      margin-bottom: 24px;
-      line-height: 28.96px;
-    }
-
-    .form__group {
-      position: relative;
-      margin-bottom: 16px;
-    }
-    
-    .feedback__form [class$="-area"] {
-      font-family: "Manrope", sans-serif;
-      font-size: 16px;
-      line-height: 21.86px;
-      margin-right: 0;
-      width: 256px;
-      padding-bottom: 5px;
-      box-sizing: border-box;
-    }
-
-    .form__group label {
-      font-size: 16px;
-    }
-    
-    [class$="-area"]:focus ~ label,
-    [class$="-area"]:not(:placeholder-shown) ~ label {
-      top: -10px;
-    }
-    
-    .form__datepicker-toggle-button {
-      left: 90%;
-    }
-    
-    .form__datepicker-input {
-      left: 25%;
-      width: 75%;
-    }
-    
-    .form__text-area {
-      height: 28px;
-    }
-    
-    .form__textarea-label {
-      font-size: 16px;
-      line-height: 21.86px;
-    }
-    
-    .form__select-wrapper::after {
-      top: 0;
-      left: 91%;
-    }
-
-    .form__checkbox-container .form__checkbox-custom {
-      margin: 4px;
-    }
-    
-    .form__checkbox-container .form__agreement {
-      margin-left: 8px;
-      margin-top: 4px;
-    }
-    
-    .form__btn {
-      margin-top: auto;
-      max-width: 256px;
     }
   }
 }

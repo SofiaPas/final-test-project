@@ -11,7 +11,7 @@
     
     <title>Final Project</title>
   </head>
-  <body>
+  <body class="body">
     <div class="container">
 
       <section class="header">
@@ -26,22 +26,22 @@
                 </picture>
               </a>
               <nav class="header__navbar">
-                <input type="checkbox" id="nav__list_toggle" class="header__nav-list_checkbox">
-                <label for="nav__list_toggle" class="header__nav-toggle">
+                <input type="checkbox" id="nav-list_toggle" class="header__nav-list_checkbox">
+                <label for="nav-list_toggle" class="header__nav-toggle">
                   ☰
                 </label>
                 <ul class="header__nav-list">
                   <li class="header__nav-item">
-                    <a class="header__nav-link" href="#about">About</a>
+                    <a class="base-link header__nav-link" href="#about">About</a>
                   </li>
                   <li class="header__nav-item">
-                    <a class="header__nav-link" href="#services">Services</a>
+                    <a class="base-link header__nav-link" href="#services">Services</a>
                   </li>
                   <li class="header__nav-item">
-                    <a class="header__nav-link" href="#founder">Founder</a>
+                    <a class="base-link header__nav-link" href="#founder">Founder</a>
                   </li>
                   <li class="header__nav-item">
-                    <a class="header__nav-link" href="#feedback">Contacts</a>
+                    <a class="base-link header__nav-link" href="#feedback">Contacts</a>
                   </li>
                 </ul>
               </nav>
@@ -58,7 +58,7 @@
                   <li class="features__list__item item-3">Cloud Infrastructure Management </li>
                 </ul>
               </div>
-              <button class="base-btn header__btn">Send a request</button>
+              <button class="base-btn header__btn" type="button" onclick="showModal()">Send a request</button>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@
           <div class="about__image-container"></div>
           <h2 class="base-title about__title">Basic marketing information <span class="green-part">about the company</span></h2>
           <p class="about__main-text">Basic marketing info about the company: We deliver customized cloud based solutions for your ideas. 20 years of high performance cloud based development experience (that’s my experience incl. Google and Gemini).</p>
-          <button class="base-btn about__btn">Send a request</button>
+          <button class="base-btn about__btn" type="button" onclick="showModal()">Send a request</button>
         </div>
       </section>
 
@@ -85,7 +85,7 @@
                 <p class="services__card-descr">Develop an app for your project: web 
                   and mobile apps for your custom business needs on Amazon Web Services, Google Cloud Platform  or your private cloud.
                 </p>
-                <button class="base-btn services__btn first">Send a request</button>
+                <button class="base-btn services__btn first" type="button" onclick="showModal()">Send a request</button>
               </div>
             </li>
 
@@ -96,7 +96,7 @@
                 <p class="services__card-descr">Manage and improve your services with
                   a dedicated development team that covers all functions. You only need to define the tasks and priorities, we are doing the rest.
                 </p>
-                <button class="base-btn services__btn second">Send a request</button>
+                <button class="base-btn services__btn second" type="button" onclick="showModal()">Send a request</button>
               </div>
             </li>
 
@@ -107,7 +107,7 @@
                 <p class="services__card-descr third">We monitor your services <br>
                   and keep them running 24/7
                 </p>
-                <button class="base-btn services__btn third">Send a request</button>
+                <button class="base-btn services__btn third" type="button" onclick="showModal()">Send a request</button>
               </div>
             </li>
 
@@ -135,22 +135,22 @@
           <div class="feedback__container">
             <div class="feedback__contacts-info">
               <h2 class="base-title section-header">Contacts</h2>
-              <p class="base-title feedback__cont-email">1@dlux.services</p>
-              <p class="base-title feedback__cont-phone">+18143511265</p>
+              <p href="mailto:1@dlux.services" class="base-title feedback__cont-email">1@dlux.services</p>
+              <p href="tel:+18143511265" class="base-title feedback__cont-phone">+18143511265</p>
             </div>
             <form action="#" method="post" class="feedback__form form">
               <h3 class="base-title form__title">Send <span class="green-part">a request</span></h3>
               <div class="form__group">
                 <input type="text" id="name" name="name" class="form__input-area" placeholder="">
-                <label for="name">Name</label>
+                <label for="name" class="form__label">Name</label>
               </div>
               <div class="form__group">
                 <input type="text" id="company" name="company" class="form__input-area" placeholder="">
-                <label for="company">Company</label>
+                <label for="company" class="form__label">Company</label>
               </div>
               <div class="form__group">
                 <input type="tel" id="tel" name="phone" class="form__input-area" placeholder="">
-                <label for="tel">Callback phone number</label>
+                <label for="tel" class="form__label">Callback phone number</label>
               </div>
               <div class="form__group">
                 <span class="form__datepicker-toggle-area">
@@ -161,18 +161,19 @@
               </div>
               <div class="form__group">
                 <input type="email" id="email" name="email" class="form__input-area" placeholder="">
-                <label for="email">Email</label>
+                <label for="email" class="form__label">Email</label>
               </div>
               <div class="form__group">
                 <textarea id="textarea" name="textarea" rows="2" class="form__text-area" placeholder=""></textarea>
-                <label for="textarea" class="form__textarea-label">What can we help you with?</label>
+                <label for="textarea" class="form__textarea-label form__label">What can we help you with?</label>
               </div>
               <div class="form__group form__select-wrapper">
-                <label for="select">How did you find us?</label>
+                <!-- <label for="select" class="form__select-label">How did you find us?</label> -->
                 <select name="select" id="select" class="form__select-area">
-                  <option value="" selected disabled></option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
+                  <option value="" disabled selected hidden>How did you find us?</option>
+                  <option value="1" class="form__select-option">Social media</option>
+                  <option value="2" class="form__select-option">TV</option>
+                  <option value="3" class="form__select-option">From a frend</option>
                 </select>
               </div>
               <div class="form__group">
@@ -182,7 +183,7 @@
                   <span class="form__agreement">I agree with the personal data processing policy</span>
                 </label>
               </div>
-              <button class="base-btn form__btn">Send a request</button>
+              <button class="base-btn form__btn" type="submit">Send a request</button>
             </form>
           </div>
         </div>
@@ -193,16 +194,16 @@
           <div class="footer__upper-part">
             <ul class="footer__nav-list">
               <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#about">About</a>
+                <a class="base-link footer__nav-link" href="#about">About</a>
               </li>
               <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#services">Services</a>
+                <a class="base-link footer__nav-link" href="#services">Services</a>
               </li>
               <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#founder">Founder</a>
+                <a class="base-link footer__nav-link" href="#founder">Founder</a>
               </li>
               <li class="footer__nav-item">
-                <a class="footer__nav-link" href="#feedback">Contacts</a>
+                <a class="base-link footer__nav-link" href="#feedback">Contacts</a>
               </li>
             </ul>
             <div class="footer__socials-box">
@@ -226,9 +227,9 @@
             </a>
             <p class="footer__main-text base-title">20 years of high performance <span class="green-part">cloud based development</span> experience</p>
             <ul class="footer__policy-terms">
-              <li class="footer__term term-1"><a class="footer__term-link" href="#">Privacy Policy</a></li>
-              <li class="footer__term term-2"><a class="footer__term-link" href="#">Rules for the processing of personal data</a></li>
-              <li class="footer__term term-3"><a class="footer__term-link" href="#">Website Terms of Use</a></li>
+              <li class="footer__term term-1"><a class="base-link footer__term-link" href="#">Privacy Policy</a></li>
+              <li class="footer__term term-2"><a class="base-link footer__term-link" href="#">Rules for the processing of personal data</a></li>
+              <li class="footer__term term-3"><a class="base-link footer__term-link" href="#">Website Terms of Use</a></li>
             </ul>
           </div>
         </div>

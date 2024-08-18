@@ -1,0 +1,242 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 559px;
+  height: 743px;
+  background: rgba(104, 104, 104, 0.26);
+  border-radius: 32px;
+  padding: 32px 32px 27px 32px;
+  position: relative;
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+
+  .form__title {
+    font-size: var(--secondary-header-size);
+    margin-bottom: 12px;
+    line-height: 0.9;
+  }
+
+  &__group {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  & [class$="-area"] {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(235, 235, 235, 1);
+    color: var(--text-color);
+    width: 485px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0; left: 0;
+    font-size: 24px;
+    color: var(--text-color);
+    transition: 0.2s ease all;
+  }
+
+  [class$="-area"]:focus ~ &__label,
+  [class$="-area"]:not(:placeholder-shown) ~ &__label {
+    top: -10px;
+    font-size: 0.75em;
+    color: var(--text-color);
+  }
+
+  [class$="-area"]:focus {
+    outline: none;
+  }
+
+  &__datepicker-toggle-area {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__datepicker-toggle-button {
+    position: absolute;
+    left: 95%;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("/images/feedback-page/Calendar_Week.svg");
+  }
+
+  &__datepicker-input {
+    position: absolute;
+    left: 65%;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    // opacity: 0;
+    // appearance: none;
+    place-items: center;
+    background: transparent;
+    border: none;
+    font-family: var(--secondary-font-fam);
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+    box-sizing: border-box;
+  } 
+
+  &__datepicker-input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__text-area {
+    resize: none;
+    overflow: auto;
+  }
+
+  &__select-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  &__select-wrapper::after {
+    content: url("/images/feedback-page/Caret_Down.svg");
+    position: absolute;
+    top: 10%;
+    left: 95%;
+    pointer-events: none;
+  }
+
+  &__select-area {
+    appearance: none;
+    position: relative;
+  }
+
+  &__select-area:focus {
+    outline: none;
+  }
+
+  &__checkbox-container {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    cursor: pointer;
+  }
+
+  &__checkbox-container input[type="checkbox"] {
+    display: none;
+  }
+
+  &__checkbox-container &__checkbox-custom {
+    height: 16px;
+    width: 16px;
+    background-image: url("/images/feedback-page/Square.svg");
+    background-size: cover;
+    margin: 4px;
+  }
+
+  &__checkbox-container input[type="checkbox"]:checked + &__checkbox-custom {
+    background-image: url("/images/feedback-page/Square_Check.svg");
+  }
+
+  &__checkbox-container &__agreement {
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 1.3;
+    align-self: center;
+  }
+
+  &__btn {
+    margin-top: 17px;
+  }
+
+
+  @media only screen and (max-width: 480px) {
+    & {
+      justify-content: flex-start;
+      width: 288px;
+      min-width: 288px;
+      height: 505px;
+      border-radius: 24px;
+      padding: 16px;
+      margin-bottom: 33px;
+    }
+    
+    .form__title {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    &__group {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    
+    & [class$="-area"] {
+      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      margin-right: 0;
+      width: 256px;
+      padding-bottom: 5px;
+      box-sizing: border-box;
+    }
+
+    &__label {
+      font-size: 16px;
+      font-family: "Manrope", sans-serif;
+    }
+    
+    [class$="-area"]:focus ~ &__label,
+    [class$="-area"]:not(:placeholder-shown) ~ &__label {
+      top: -10px;
+    }
+    
+    &__datepicker-toggle-button {
+      left: 90%;
+    }
+    
+    &__datepicker-input {
+      left: 25%;
+      width: 75%;
+    }
+    
+    &__text-area {
+      height: 28px;
+    }
+    
+    &__textarea-label {
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    
+    &__select-wrapper::after {
+      top: 0;
+      left: 91%;
+    }
+
+    &__checkbox-container &__checkbox-custom {
+      margin: 4px;
+    }
+    
+    &__checkbox-container &__agreement {
+      font-family: var(--secondary-font-fam);
+      margin-left: 8px;
+      margin-top: 4px;
+    }
+    
+    &__btn {
+      margin-top: auto;
+      max-width: 256px;
+    }
+  }
+}

@@ -12,7 +12,7 @@
   --anim-mob-height: calc(var(--anim-mob-width) / 1.8);
 
 
-  .about__decorative-container::before {
+  &__decorative-container::before {
     content: url("/images/about-us-page/Frame.svg");
     display: inline-block;
     position: absolute;
@@ -22,7 +22,7 @@
     height: 497.44px;
   }
 
-  .about__decorative-container::after {
+  &__decorative-container::after {
     content: url("/images/about-us-page/Frame2.svg");
     display: inline-block;
     position: absolute;
@@ -33,7 +33,7 @@
     z-index: -1;
   }
 
-  .about__image-container {
+  &__image-container {
     position: relative;
     top: 120px; left: 31px;
     width: var(--anim-width);
@@ -53,7 +53,7 @@
     text-align: center;
   }
 
-  .about__image-container::before {
+  &__image-container::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -63,7 +63,7 @@
     z-index: 1;
   }
 
-  .about__image-container::after {
+  &__image-container::after {
     position: absolute;
     content: "";
     top: 0; left: 0;
@@ -87,8 +87,8 @@
   }
 
   .about__title {
-    font-size: var(--fs-h2);
-    line-height: 57.92px;
+    font-size: var(--secondary-header-size);
+    line-height: 0.9;
     padding-top: 93px;
     margin: 0 153px 24px 124px;
     max-width: 923px;
@@ -97,21 +97,21 @@
     z-index: 2;
   }
 
-  .about__main-text {
+  &__main-text {
     margin: 0 653px 20px 124px;
     max-width: 423px;
     min-width: 288px;
   }
 
-  .about__btn {
+  &__btn {
     margin-left: 124px;
     margin-top: 12px;
     margin-bottom: 100px;
   }
-  
+
 
   @media only screen and (max-width: 480px) {
-    .about__decorative-container::before {
+    &__decorative-container::before {
       content: url("/images/about-us-page/Frame-mobile.svg");
       top: 25px;
       left: 300px;
@@ -119,11 +119,11 @@
       height: auto;
     }  
     
-    .about__decorative-container::after {
+    &__decorative-container::after {
       content: "";
     }
 
-    .about__image-container {
+    &__image-container {
       top: 64px; left: 16px;
       width: var(--anim-mob-width);
       height: var(--anim-mob-height);
@@ -138,24 +138,23 @@
       background-position: 100% -16px;
     }
     
-    .about__image-container::before {
+    &__image-container::before {
       display: none;
     }
 
     .about__title {
       font-size: 32px;
-      line-height: 28.96px;
       margin: 24px 0 0 16px;
       padding-top: 60px;
       max-width: 288px;
     }
 
-    .about__main-text {
+    &__main-text {
       margin: 24px 0 0 16px;
       max-width: 288px;
     }
 
-    .about__btn {
+    &__btn {
       margin: 24px 0 20px 16px;
     }
   }

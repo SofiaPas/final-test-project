@@ -2,7 +2,7 @@
   position: relative;
   height: 599px;
   
-  .founder__decorative-container::before {
+  &__decorative-container::before {
     content: url("/images/founder-page/Frame.svg");
     display: inline-block;
     position: absolute;
@@ -18,7 +18,7 @@
     left: 578px;
   }
 
-  .founder__img-box {
+  &__img-box {
     display: inline-block;
     position: relative;
     top: 100px;
@@ -27,12 +27,12 @@
     height: auto;
   }
 
-  .founder__img {
+  &__img {
     border-radius: 24px;
     max-width: 100%;
   }
 
-  .founder__main-text {
+  &__main-text {
     position: absolute;
     top: 331px;
     left: 790px;
@@ -46,7 +46,7 @@
       margin: 0 16px 0 16px;
     }
     
-    .founder__decorative-container::before {
+    &__decorative-container::before {
       content: none;
     }
     
@@ -56,7 +56,7 @@
       left: unset;
     }
     
-    .founder__img-box {
+    &__img-box {
       top: 191px;
       left: unset;
       max-width: 288px;
@@ -66,7 +66,7 @@
       overflow: hidden;
     }
     
-    .founder__main-text {
+    &__main-text {
       margin: 0;
       position: absolute;
       top: 87px;
