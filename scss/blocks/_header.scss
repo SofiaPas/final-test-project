@@ -83,7 +83,7 @@
     margin-left: 30px;
   }
 
-  .header__title {
+  &__title {
     font-family: var(--primary-font-fam);
     font-weight: 600;
     font-size: 36px;
@@ -195,7 +195,7 @@
       margin-left: 16px;
     }
 
-    .header__title {
+    &__title {
       font-size: 32px;
       margin-bottom: 16px;
       line-height: 0.9;

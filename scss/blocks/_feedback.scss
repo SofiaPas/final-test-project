@@ -24,7 +24,7 @@
     justify-content: flex-end;
   }
 
-  .feedback__cont-email,
+  &__cont-email,
   &__cont-phone {
     margin: 0;
     font-size: var(--secondary-header-size);
@@ -36,7 +36,9 @@
     margin-bottom: 0;
   }
   
-  .feedback__section-header {
+  &__section-header {
+    font-size: var(--primary-header-size);
+    line-height: 0.9;
     margin-bottom: 64px;
   }
 
@@ -58,8 +60,8 @@
       margin-left: 57px;
     }
     
-    .feedback__cont-email,
-    .feedback__cont-phone {
+    &__cont-email,
+    &__cont-phone {
       font-size: 24px;
       margin-bottom: 13px;
     }

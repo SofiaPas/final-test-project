@@ -16,6 +16,8 @@
     position: absolute;
     top: 193px;
     left: 578px;
+    font-size: var(--primary-header-size);
+    line-height: 0.9;
   }
 
   &__img-box {
@@ -51,9 +53,9 @@
     }
     
     &__section-header {
-      position: absolute;
       top: 36px;
       left: unset;
+      font-size: 48px;
     }
     
     &__img-box {

@@ -86,7 +86,7 @@
     }
   }
 
-  .about__title {
+  &__title {
     font-size: var(--secondary-header-size);
     line-height: 0.9;
     padding-top: 93px;
@@ -142,7 +142,7 @@
       display: none;
     }
 
-    .about__title {
+    &__title {
       font-size: 32px;
       margin: 24px 0 0 16px;
       padding-top: 60px;

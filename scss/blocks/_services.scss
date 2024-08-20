@@ -17,6 +17,8 @@
     left: 124px;
     z-index: 5;
     width: max-content;
+    font-size: var(--primary-header-size);
+    line-height: 0.9;
   }
 
   &__serv-list {
@@ -49,7 +51,6 @@
     padding: 30px;
     border-radius: 24px;
     background: var(--serv-card-bg-color);
-    min-width: min-content;
   }
 
   &__card-img {
@@ -99,8 +100,8 @@
     &__section-header {
       top: 36px;
       left: 16px;
-      position: relative;
       margin-bottom: 0px;
+      font-size: 48px;
     }
 
     &__serv-list {
@@ -119,8 +120,6 @@
     }
 
     &__card {
-      display: grid;
-      grid-template-rows: auto auto 1fr auto;
       padding: 16px;
       max-width: min-content;
     }

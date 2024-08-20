@@ -1,7 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
 :root {
   --primary-font-fam: "Poppins", sans-serif;
   --secondary-font-fam: "Oxygen", sans-serif;
@@ -20,6 +16,12 @@
   initial-value: 132deg;
   inherits: false;
 }
+
+//base
+@import 'scss/base/_base-title.scss';
+@import 'scss/base/_base-btn.scss';
+@import 'scss/base/_base-link.scss';
+
 //blocks
 @import 'scss/blocks/_header.scss';
 @import 'scss/blocks/_about.scss';
@@ -29,17 +31,13 @@
 @import 'scss/blocks/_form.scss';
 @import 'scss/blocks/_footer.scss';
 
-//classes
-@import 'scss/common/_common-html.scss';
-@import 'scss/common/_common-body.scss';
-@import 'scss/common/_common-fonts.scss';
-@import 'scss/common/_common-section-header.scss';
-@import 'scss/common/_common-container.scss';
-
-//base
-@import 'scss/base/_base-title.scss';
-@import 'scss/base/_base-btn.scss';
-@import 'scss/base/_base-link.scss';
+//common classes
+@import 'scss/common/_html.scss';
+@import 'scss/common/_body.scss';
+@import 'scss/common/_fonts.scss';
+@import 'scss/common/_section-header.scss';
+@import 'scss/common/_container.scss';
 
 //utilities
-@import 'scss/utilities/_utilities-green-part.scss';
+@import 'scss/utilities/_green-part.scss';
+
