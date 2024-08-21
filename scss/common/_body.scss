@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: min-content;
+  margin: 0 auto;
   font-family: var(--secondary-font-fam);
   color: var(--text-color);
   background-color: var(--background-color);
