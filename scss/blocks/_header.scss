@@ -65,14 +65,15 @@
   &__nav-list {
     display: flex;
     justify-content: space-between;
+    gap: 3vw;
     margin: 0;
-    margin-left: auto;
     padding: 0;
+    margin-left: auto;
     list-style: none;
   }
 
   &__nav-item {
-    margin-right: 32px;
+    // margin-right: 32px;
   }
   
   &__nav-item:last-child {
@@ -176,6 +177,7 @@
       top: 60px; 
       left: 250px;
       align-items: flex-end;
+      gap: unset;
     }
     
     #nav-list_toggle:checked + &__nav-toggle + &__nav-list {

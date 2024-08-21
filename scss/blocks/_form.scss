@@ -72,21 +72,22 @@
   &__datepicker-input {
     position: absolute;
     left: 65%;
-    top: 0;
+    top: -5px;
     width: 35%;
     height: 100%;
-    // opacity: 0;
-    // appearance: none;
     place-items: center;
     background: transparent;
     border: none;
     font-family: var(--secondary-font-fam);
     font-size: 20px;
-    padding-bottom: 10px;
-    color: var(--text-color);
+    color: transparent;
     cursor: pointer;
     box-sizing: border-box;
   } 
+
+  &__datepicker-input:focus {
+    color: var(--text-color);
+  }
 
   &__datepicker-input::-webkit-calendar-picker-indicator {
     position: absolute;
@@ -206,10 +207,14 @@
     }
     
     &__datepicker-input {
-      left: 25%;
-      width: 75%;
+      left: 40%;
+      width: 60%;
     }
     
+    &__datepicker-input:focus {
+      background-color: rgba(17, 70, 69, 1);
+    }
+
     &__text-area {
       height: 28px;
     }
