@@ -1,6 +1,6 @@
 .feedback {
-
-  &__image-container {
+  
+  &__wrapper {
     background-image: image-set(
       url("/images/feedback-page/clouds-img@1X.png") 1x,
       url("/images/feedback-page/clouds-img@2X.png") 2x,
@@ -10,11 +10,12 @@
     background-repeat: no-repeat;
   }
 
-  &__container {
+  &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 30px 100px 30px;
-    padding-top: 120px;
+    padding: 120px 30px 100px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   &__contacts-info {
@@ -48,11 +49,13 @@
       display: none;
     }
 
-    &__container {
+    &__content {
+      max-width: fit-content;
+      margin: 0 auto;
+      margin-top: 53px;
       display: flex;
       flex-direction: column;
-      margin: 53px 16px 0px 16px;
-      padding-top: 0;
+      padding: 0;
     } 
 
     &__contacts-info {

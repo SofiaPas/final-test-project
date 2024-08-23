@@ -1,9 +1,9 @@
 .header {
 
-  &__img-container {
+  &__wrapper {
     position: relative;
     width: 100%;
-    height: 736px;
+    height: auto;
     background-image: image-set(
       url("/images/head-page/backgr-img@1X.jpg") 1x,
       url("/images/head-page/backgr-img@2X.jpg") 2x,
@@ -27,6 +27,8 @@
   &__content {
     position: relative;
     z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   &__main-menu {
@@ -70,10 +72,6 @@
     padding: 0;
     margin-left: auto;
     list-style: none;
-  }
-
-  &__nav-item {
-    // margin-right: 32px;
   }
   
   &__nav-item:last-child {
@@ -136,6 +134,11 @@
 
 
   @media only screen and (max-width: 480px) {
+    &__content {
+      max-width: fit-content;
+      margin: 0 auto;
+    }
+
     &__img-container {
       height: auto;
     }
@@ -144,8 +147,8 @@
       grid-template-columns: 114px auto;
       column-gap: 0;
       margin-bottom: 221px;
-      margin-left: 16px;
-      margin-right: 16px;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     &__logo-box {
@@ -175,7 +178,8 @@
       width: 70px;
       position: absolute;
       top: 60px; 
-      left: 250px;
+      left: 215px;
+      margin-right: 16px;
       align-items: flex-end;
       gap: unset;
     }
@@ -185,16 +189,14 @@
     }
 
     &__nav-item {
-      margin-right: 16px;
       margin-top: 10px;
     }
     
     &__nav-item:last-child {
-      margin-right: 16px;
     }
 
     &__lower-part {
-      margin-left: 16px;
+      margin: 0 auto;
     }
 
     &__title {

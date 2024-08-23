@@ -2,6 +2,11 @@
   position: relative;
   height: 599px;
   
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   &__decorative-container::before {
     content: url("/images/founder-page/Frame.svg");
     display: inline-block;
@@ -12,23 +17,23 @@
     height: 55px;
   }
   
-  &__animation-container {
-    display: block;
-    position: absolute;
-    top: 160px;
-    right: -180px;
-    width: 288px;
-    height: 288px;
-    background-color: rgba(102, 221, 141, .3);
-    border-radius: 50%;
-    filter: blur(100px);
-    // opacity: 0%;
-    transition: all 1s;
-  }
+  // &__animation-container {
+  //   display: block;
+  //   position: absolute;
+  //   top: 160px;
+  //   right: -180px;
+  //   width: 288px;
+  //   height: 288px;
+  //   background-color: rgba(102, 221, 141, .3);
+  //   border-radius: 50%;
+  //   filter: blur(100px);
+  //   // opacity: 0%;
+  //   transition: all 1s;
+  // }
   
-  &__animation-container:hover {
-    opacity: 100%;
-  }
+  // &__animation-container:hover {
+  //   opacity: 100%;
+  // }
 
   &__section-header {
     position: absolute;
@@ -63,7 +68,11 @@
   @media only screen and (max-width: 480px) {
     & {
       height: 419px;
-      margin: 0 16px 0 16px;
+    }
+
+    &__content {
+      max-width: fit-content;
+      margin: 0 auto;
     }
     
     &__decorative-container::before {

@@ -11,6 +11,13 @@
   --anim-mob-width: 288px;
   --anim-mob-height: calc(var(--anim-mob-width) / 1.8);
 
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 
   &__decorative-container::before {
     content: url("/images/about-us-page/Frame.svg");
@@ -111,6 +118,11 @@
 
 
   @media only screen and (max-width: 480px) {
+    &__content {
+      max-width: fit-content;
+      margin: 0 auto;
+    }  
+
     &__decorative-container::before {
       content: url("/images/about-us-page/Frame-mobile.svg");
       top: 25px;
@@ -124,7 +136,7 @@
     }
 
     &__image-container {
-      top: 64px; left: 16px;
+      top: 64px; left: 0;
       width: var(--anim-mob-width);
       height: var(--anim-mob-height);
       min-width: 288px;
@@ -144,18 +156,18 @@
 
     &__title {
       font-size: 32px;
-      margin: 24px 0 0 16px;
+      margin: 24px 0 0 0;
       padding-top: 60px;
       max-width: 288px;
     }
 
     &__main-text {
-      margin: 24px 0 0 16px;
+      margin: 24px 0 0 0;
       max-width: 288px;
     }
 
     &__btn {
-      margin: 24px 0 20px 16px;
+      margin: 24px 0 20px 0;
     }
   }
 }

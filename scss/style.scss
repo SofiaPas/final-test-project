@@ -1,21 +1,10 @@
-:root {
-  --primary-font-fam: "Poppins", sans-serif;
-  --secondary-font-fam: "Oxygen", sans-serif;
-  --tertiary-font-fam: "Manrope", sans-serif;
-  --primary-header-size: 128px;
-  --secondary-header-size: 64px;
-  --text-color: rgba(255, 255, 255);
-  --background-color: rgba(17, 43, 69, 1);
-  --primary-color: rgba(49, 91, 239, 1);
-  --secondary-color: rgba(102, 221, 141, 1);
-  --serv-card-bg-color: rgba(25, 63, 102, 0.32);
-}
-
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
+//common classes
+@import 'scss/common/_root.scss';
+@import 'scss/common/_html.scss';
+@import 'scss/common/_body.scss';
+@import 'scss/common/_fonts.scss';
+@import 'scss/common/_section-header.scss';
+@import 'scss/common/_main-container.scss';
 
 //base
 @import 'scss/base/_base-title.scss';
@@ -31,14 +20,6 @@
 @import 'scss/blocks/_form.scss';
 @import 'scss/blocks/_footer.scss';
 @import 'scss/blocks/_info.scss';
-
-//common classes
-@import 'scss/common/_html.scss';
-@import 'scss/common/_body.scss';
-@import 'scss/common/_fonts.scss';
-@import 'scss/common/_section-header.scss';
-@import 'scss/common/_container.scss';
-@import 'scss/common/_main-container.scss';
 
 //utilities
 @import 'scss/utilities/_green-part.scss';

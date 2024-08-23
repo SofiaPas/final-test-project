@@ -1,6 +1,11 @@
 .services {
   position: relative;
 
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   &__decorative-container::before {
     content: url("/images/services-page/Frame.svg");
     display: inline-block;
@@ -110,6 +115,11 @@
 
 
   @media only screen and (max-width: 480px) {
+    &__content {
+      max-width: fit-content;
+      margin: 0 auto;
+    }
+
     &__decorative-container::before {
       content: url("/images/services-page/Frame-mobile.svg");
       top: 45px;
@@ -127,7 +137,9 @@
 
     &__serv-list {
       flex-direction: column;
-      margin: 55px 16px 16px 16px;
+      margin: 0 auto;
+      margin-top: 55px;
+      margin-bottom: 16px;
     }
     
     &__card-box {

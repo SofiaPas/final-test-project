@@ -2,6 +2,7 @@
   background-color: rgba(8, 29, 49, 1);
 
   &__wrapper {
+    width: 100%;
     background-image: image-set(
       url("/images/footer-page/x-symbol@1X.png") 1x,
       url("/images/footer-page/x-symbol@2X.png") 2x,
@@ -12,15 +13,10 @@
     background-position: 400px 0px;
   }
 
-  // &__upper-part {
-  //   display: grid;
-  //   grid-template-columns: 324px 328px;
-  //   column-gap: 488px;
-  //   margin-bottom: 169px;
-  //   padding-top: 32px;
-  //   padding-left: 30px;
-  //   padding-right: 30px;
-  // }
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   &__upper-part {
     display: grid;
@@ -74,14 +70,22 @@
     height: 48px;
     background-color: var(--primary-color);
     border-radius: 50%;
-    cursor: pointer;
     place-items: center;
   }
 
+  &__social-item:hover {
+    background-color: rgba(49, 70, 239, 1);
+  }
+
+  &__social-item:active {
+    background-color: rgba(49, 40, 239, 1);
+  }
+  
   &__icon {
     display: grid;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
   }
 
   &__lower-part {
@@ -140,6 +144,11 @@
 
 
   @media only screen and (max-width: 480px) {
+
+    &__content {
+      width: fit-content;
+    }
+
     &__upper-part {
       grid-template-columns: 64px 1fr;
       column-gap: 88px;
@@ -185,7 +194,6 @@
       grid-template-columns: 288px;
       grid-template-rows: auto 109px auto;
       padding: 0;
-      margin: 0 16px 16px;
     }
     
     &__logo-box {
