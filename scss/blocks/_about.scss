@@ -106,7 +106,7 @@
 
   &__main-text {
     margin: 0 0px 20px 124px;
-    max-width: 40vw;
+    max-width: 50vw;
     min-width: 288px;
   }
 
@@ -119,7 +119,7 @@
 
   @media only screen and (orientation: portrait) {
     &__content {
-      max-width: 50vw;
+      max-width: 60vw;
       min-width: 288px;
     }  
 
@@ -136,7 +136,7 @@
     }
 
     &__image-wrapper {
-      width: clamp(288px, 55vw, 650px);
+      width: clamp(288px, 65vw, 650px);
       height: var(--anim-mob-height);
       margin-top: 56px;
     }

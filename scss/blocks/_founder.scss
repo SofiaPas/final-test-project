@@ -49,15 +49,19 @@
   }
 
   &__img-box {
+    display: inline-block;
+    aspect-ratio: 4/3;
     grid-row: 1/-1;
-    max-width: 100%;
-    height: auto;
+    overflow: hidden;
+    border-radius: 24px;
   }
   
   &__img {
-    border-radius: 24px;
-    max-width: 100%;
-    min-width: 250px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(2.1);
+    transform-origin: 52% 15%;
   }
 
   &__main-text {
@@ -70,7 +74,7 @@
   @media only screen and (orientation: portrait) {
     &__content {
       margin: 0 auto;
-      max-width: 50vw;
+      max-width: 60vw;
       min-width: 288px;
     }
     
@@ -93,16 +97,12 @@
     }
     
     &__img-box {
-      height: 180px;
-      margin-left: 0;
+      aspect-ratio: 4/2.5;
       margin-top: 20px;
       margin-bottom: 48px;
       grid-row-start: 3;
-      background-size: cover;
-      border-radius: 24px;
-      overflow: hidden;
     }
-    
+
     &__main-text {
       margin: 0;
     }

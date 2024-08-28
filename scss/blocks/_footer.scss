@@ -145,7 +145,8 @@
   @media only screen and (orientation: portrait) {
     
     &__content {
-      width: fit-content;
+      max-width: 60vw;
+      min-width: 288px;
     }
 
     &__upper-part {
