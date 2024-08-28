@@ -3,18 +3,20 @@
   &__wrapper {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-image: image-set(
-      url("/images/head-page/backgr-img@1X.jpg") 1x,
-      url("/images/head-page/backgr-img@2X.jpg") 2x,
-      url("/images/head-page/backgr-img@1X.webp") 1x,
-      url("/images/head-page/backgr-img@2X.webp") 2x
+      url("/images/head-page/hero-img@1X.jpg") 1x,
+      url("/images/head-page/hero-img@2X.jpg") 2x,
+      url("/images/head-page/hero-img@1X.webp") 1x,
+      url("/images/head-page/hero-img@2X.webp") 2x
     );
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  &__overlay {
+  &__wrapper::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -32,9 +34,7 @@
   }
 
   &__main-menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(159px, 1fr));
-    column-gap: 1vw;
+    display: flex;
     padding-top: 8px;
     margin-bottom: 121px;
     margin-left: 30px;
@@ -42,6 +42,7 @@
     }
   
     &__logo-box {
+    display: inline-block;
     height: 104px;
     width: 159px;
     margin-top: 8px;
@@ -57,6 +58,7 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 13px;
+    margin-left: auto;
   }
   
   &__nav-toggle,
@@ -79,6 +81,8 @@
   }
 
   &__lower-part {
+    display: flex;
+    flex-direction: column;
     margin-left: 30px;
   }
 
@@ -129,14 +133,19 @@
   }
 
   &__btn {
-    margin: 32px 0 241px;
+    margin-top: 32px;
   }
 
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (orientation: portrait) {
     &__content {
-      max-width: fit-content;
-      margin: 0 auto;
+      // display: flex;
+      // flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(1, auto 1fr);
+      max-width: 80vw;
+      min-width: 288px;
     }
 
     &__img-container {
@@ -144,18 +153,19 @@
     }
 
     &__main-menu {
-      grid-template-columns: 114px auto;
-      column-gap: 0;
       margin-bottom: 221px;
+      // margin-bottom: auto;
       margin-left: 0;
       margin-right: 0;
+      padding-left: 16px;
+      padding-right: 16px;
     }
 
     &__logo-box {
       height: 75px;
       width: 114px;
     }
-
+    
     &__navbar {
       flex-direction: column;
       margin-top: 0;
@@ -169,17 +179,13 @@
       display: block;
       font-size: 28px;
       cursor: pointer;
-      margin-left: 150px;
+      margin-left: 12.5vw;
     }
 
     &__nav-list  {
       display: none;
       flex-direction: column;
       width: 70px;
-      position: absolute;
-      top: 60px; 
-      left: 215px;
-      margin-right: 16px;
       align-items: flex-end;
       gap: unset;
     }
@@ -191,19 +197,16 @@
     &__nav-item {
       margin-top: 10px;
     }
-    
-    &__nav-item:last-child {
-    }
 
     &__lower-part {
       margin: 0 auto;
+      // margin-top: auto;
     }
 
     &__title {
       font-size: 32px;
       margin-bottom: 16px;
       line-height: 0.9;
-      max-width: 288px;
     }
 
     &__btn {

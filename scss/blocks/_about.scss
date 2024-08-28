@@ -8,43 +8,48 @@
   position: relative;
   --anim-width: 1139px;
   --anim-height: calc(var(--anim-width) / 3.14);
-  --anim-mob-width: 288px;
+  --anim-mob-width: clamp(288px, 40vw, 650px);
   --anim-mob-height: calc(var(--anim-mob-width) / 1.8);
 
   &__content {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
   }
 
-  &__decorative-container::before {
-    content: url("/images/about-us-page/Frame.svg");
-    display: inline-block;
-    position: absolute;
-    top: 416px;
-    left: 673px;
-    width: 236.48px;
-    height: 497.44px;
-  }
+  // &__decorative-container::before {
+  //   content: url("/images/about-us-page/Frame.svg");
+  //   display: inline-block;
+  //   position: absolute;
+  //   top: 416px;
+  //   left: 673px;
+  //   width: 236.48px;
+  //   height: 497.44px;
+  // }
 
-  &__decorative-container::after {
-    content: url("/images/about-us-page/Frame2.svg");
-    display: inline-block;
-    position: absolute;
-    top: 471px;
-    left: 646px;
-    width: 236.48px;
-    height: 497.44px;
-    z-index: -1;
+  // &__decorative-container::after {
+  //   content: url("/images/about-us-page/Frame2.svg");
+  //   display: inline-block;
+  //   position: absolute;
+  //   top: 471px;
+  //   left: 646px;
+  //   width: 236.48px;
+  //   height: 497.44px;
+  //   z-index: -1;
+  // }
+
+  &__image-wrapper {
+    position: relative;
+    width: clamp(500px,  85vw, 1139px);
+    height: var(--anim-height);
+    margin: 0 auto;
+    margin-top: 120px;
   }
 
   &__image-container {
     position: relative;
-    top: 120px; left: 31px;
-    width: var(--anim-width);
-    height: var(--anim-height);
+    width: 100%;
+    height: 100%;
     background: image-set(
       url("/images/about-us-page/backgr-img1X.jpg") 1x,
       url("/images/about-us-page/backgr-img2X.jpg") 2x,
@@ -53,11 +58,8 @@
       );
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 0 65%;
     border-radius: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 
   &__image-container::before {
@@ -94,19 +96,17 @@
   }
 
   &__title {
-    font-size: var(--secondary-header-size);
+    font-size: clamp(55px, 5.3vw, 64px);
     line-height: 0.9;
-    padding-top: 93px;
-    margin: 0 153px 24px 124px;
-    max-width: 923px;
-    min-width: 288px;
+    margin: -15px 0px 24px 124px;
+    max-width: 70vw;
     position: relative;
     z-index: 2;
   }
 
   &__main-text {
-    margin: 0 653px 20px 124px;
-    max-width: 423px;
+    margin: 0 0px 20px 124px;
+    max-width: 40vw;
     min-width: 288px;
   }
 
@@ -117,53 +117,38 @@
   }
 
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (orientation: portrait) {
     &__content {
-      max-width: fit-content;
-      margin: 0 auto;
+      max-width: 50vw;
+      min-width: 288px;
     }  
 
-    &__decorative-container::before {
-      content: url("/images/about-us-page/Frame-mobile.svg");
-      top: 25px;
-      left: 300px;
-      width: auto;
-      height: auto;
-    }  
+    // &__decorative-container::before {
+    //   content: url("/images/about-us-page/Frame-mobile.svg");
+    //   top: 25px;
+    //   left: 300px;
+    //   width: auto;
+    //   height: auto;
+    // }  
     
     &__decorative-container::after {
-      content: "";
+      display: none;
     }
 
-    &__image-container {
-      top: 64px; left: 0;
-      width: var(--anim-mob-width);
+    &__image-wrapper {
+      width: clamp(288px, 55vw, 650px);
       height: var(--anim-mob-height);
-      min-width: 288px;
-      background: image-set(
-        url("/images/about-us-page/backgr-img-mobile1X.jpg") 1x,
-        url("/images/about-us-page/backgr-img-mobile2X.jpg") 2x,
-        url("/images/about-us-page/backgr-img-mobile1X.webp") 1x,
-        url("/images/about-us-page/backgr-img-mobile2X.webp") 2x
-        );
-      background-size: cover;
-      background-position: 100% -16px;
-    }
-    
-    &__image-container::before {
-      display: none;
+      margin-top: 56px;
     }
 
     &__title {
       font-size: 32px;
       margin: 24px 0 0 0;
-      padding-top: 60px;
-      max-width: 288px;
+      min-width: 288px;
     }
 
     &__main-text {
       margin: 24px 0 0 0;
-      max-width: 288px;
     }
 
     &__btn {

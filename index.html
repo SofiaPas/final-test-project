@@ -16,13 +16,21 @@
 
       <section class="header">
         <div class="header__wrapper">
-          <div class="header__overlay"></div>
           <div class="header__content">
             <div class="header__main-menu">
               <a href="#">
                 <picture class="header__logo-box">
-                  <source srcset="images/head-page/logo-img.webp" type="image/webp" class="header__logo">
-                  <img src="images/head-page/logo-img.png" width="159" height="104" alt="Logo" class="header__logo">
+                  <source 
+                  srcset="images/head-page/logo-img.webp" 
+                  type="image/webp" 
+                  class="header__logo">
+                  <img 
+                  src="images/head-page/logo-img.png" 
+                  alt="Logo"
+                  width="159" 
+                  height="104" 
+                  loading="eager"
+                  class="header__logo">
                 </picture>
               </a>
               <nav class="header__navbar">
@@ -69,8 +77,10 @@
       <section class="about" id="about">
         <div class="about__content">
           <div class="about__decorative-container"></div>
-          <div class="about__image-container"></div>
-          <h2 class="base-title about__title">Basic marketing information <span class="green-part">about thecompany</span></h2>
+          <div class="about__image-wrapper">
+            <div class="about__image-container"></div>
+          </div>
+          <h2 class="base-title about__title">Basic marketing information <span class="green-part">about the company</span></h2>
           <p class="about__main-text">Basic marketing info about the company: We deliver customized cloud based solutions for your ideas. 20 years of high performance cloud based development experience (that’s my experience incl. Google and Gemini).</p>
           <a href="#requestForm">
             <button class="base-btn about__btn" type="button">Send a request</button>
@@ -85,41 +95,41 @@
             <h2 class="base-title services__section-header">Services</h2>
             <ul class="services__serv-list">
 
-              <li class="services__card-box first">
-                <div class="services__card first">
+              <li class="services__card-box">
+                <div class="services__card">
                   <img src="/images/services-page/Data.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
                   <h3 class="base-title services__card-title">Cloud based development</h3>
                   <p class="services__card-descr">Develop an app for your project: web 
                     and mobile apps for your custom business needs on Amazon Web Services, Google Cloud Platform  or your private cloud.
                   </p>
                   <a href="#requestForm">
-                    <button class="base-btn services__btn first" type="button">Send a request</button>
+                    <button class="base-btn services__btn services__btn-first" type="button">Send a request</button>
                   </a>
                 </div>
               </li>
 
-              <li class="services__card-box second">
-                <div class="services__card second">
+              <li class="services__card-box">
+                <div class="services__card">
                   <img src="/images/services-page/Window-code-block.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
                   <h3 class="base-title services__card-title">Remote development teams</h3>
                   <p class="services__card-descr">Manage and improve your services with
                     a dedicated development team that covers all functions. You only need to define the tasks and priorities, we are doing the rest.
                   </p>
                   <a href="#requestForm">
-                    <button class="base-btn services__btn second" type="button">Send a request</button>
+                    <button class="base-btn services__btn services__btn-second" type="button">Send a request</button>
                   </a>
                 </div>
               </li>
 
-              <li class="services__card-box third">
-                <div class="services__card third">
+              <li class="services__card-box">
+                <div class="services__card">
                   <img src="/images/services-page/Clock.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
-                  <h3 class="base-title services__card-title third">Infrastructure management</h3>
-                  <p class="services__card-descr third">We monitor your services <br>
+                  <h3 class="base-title services__card-title services__card-title-third">Infrastructure management</h3>
+                  <p class="services__card-descr services__card-descr-third">We monitor your services
                     and keep them running 24/7
                   </p>
                   <a href="#requestForm">
-                    <button class="base-btn services__btn third" type="button">Send a request</button>
+                    <button class="base-btn services__btn services__btn-third" type="button">Send a request</button>
                   </a>
                 </div>
               </li>
@@ -130,9 +140,10 @@
       </section>
 
       <section class="founder" id="founder">
+        <div class="founder__decorative-container"></div>
         <div class="founder__content">
-          <div class="founder__animation-container"></div>
-          <div class="founder__decorative-container">
+          <!-- <div class="founder__animation-container"></div> -->
+          <div class="founder__wrapper">
             <h2 class="base-title founder__section-header">Founder</h2>
             <picture class="founder__img-box">
               <source srcset="/images/founder-page/Founder@2X.webp" type="image/webp" class="founder__img">
@@ -144,6 +155,7 @@
               of users as a senior Google
             </p>
           </div>
+          <!-- </div> -->
         </div>
       </section>
 
@@ -189,7 +201,7 @@
                   <option value="" disabled selected hidden>How did you find us?</option>
                   <option value="1" class="form__select-option">Social media</option>
                   <option value="2" class="form__select-option">TV</option>
-                  <option value="3" class="form__select-option">From a frend</option>
+                  <option value="3" class="form__select-option">From a friend</option>
                 </select>
               </div>
               <div class="form__group">

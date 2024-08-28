@@ -1,21 +1,27 @@
 .founder {
-  position: relative;
-  height: 599px;
-  
-  &__content {
+   &__content {
     max-width: 1200px;
     margin: 0 auto;
   }
-
-  &__decorative-container::before {
-    content: url("/images/founder-page/Frame.svg");
-    display: inline-block;
-    position: absolute;
-    top: 347px;
-    left: 467px;
-    width: 291px;
-    height: 55px;
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 1fr);
+    grid-template-rows: repeat(1, 1fr 1fr);
+    gap: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
+
+  // &__decorative-container::before {
+  //   content: url("/images/founder-page/Frame.svg");
+  //   // display: inline-block;
+  //   // position: absolute;
+  //   // top: 347px;
+  //   // left: 467px;
+  //   width: 291px;
+  //   height: 55px;
+  // }
   
   // &__animation-container {
   //   display: block;
@@ -36,60 +42,62 @@
   // }
 
   &__section-header {
-    position: absolute;
-    top: 193px;
-    left: 578px;
-    font-size: var(--primary-header-size);
+    margin-right: auto;
+    margin-top: auto;
+    font-size: clamp(80px, 10.7vw, 130px);
     line-height: 0.9;
   }
 
   &__img-box {
-    display: inline-block;
-    position: relative;
-    top: 100px;
-    left: 30px;
+    grid-row: 1/-1;
     max-width: 100%;
     height: auto;
   }
-
+  
   &__img {
     border-radius: 24px;
     max-width: 100%;
+    min-width: 250px;
   }
 
   &__main-text {
-    position: absolute;
-    top: 331px;
-    left: 790px;
+    margin: 0;
+    margin-left: auto;
     max-width: 378px;
   }
   
 
-  @media only screen and (max-width: 480px) {
-    & {
-      height: 419px;
-    }
-
+  @media only screen and (orientation: portrait) {
     &__content {
-      max-width: fit-content;
       margin: 0 auto;
+      max-width: 50vw;
+      min-width: 288px;
     }
     
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr;
+      gap: 10px;
+      justify-items: center;
+      vertical-align: middle;
+      margin: 0 auto;
+    }
+
     &__decorative-container::before {
       content: none;
     }
     
     &__section-header {
-      top: 36px;
-      left: unset;
       font-size: 48px;
+      margin-top: 36px;
     }
     
     &__img-box {
-      top: 191px;
-      left: unset;
-      max-width: 288px;
       height: 180px;
+      margin-left: 0;
+      margin-top: 20px;
+      margin-bottom: 48px;
+      grid-row-start: 3;
       background-size: cover;
       border-radius: 24px;
       overflow: hidden;
@@ -97,10 +105,6 @@
     
     &__main-text {
       margin: 0;
-      position: absolute;
-      top: 87px;
-      left: unset;
-      max-width: 265px;
     }
   }
 }
