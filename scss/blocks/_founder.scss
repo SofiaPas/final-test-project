@@ -23,19 +23,18 @@
   //   height: 55px;
   // }
   
-  // &__animation-container {
-  //   display: block;
-  //   position: absolute;
-  //   top: 160px;
-  //   right: -180px;
-  //   width: 288px;
-  //   height: 288px;
-  //   background-color: rgba(102, 221, 141, .3);
-  //   border-radius: 50%;
-  //   filter: blur(100px);
-  //   // opacity: 0%;
-  //   transition: all 1s;
-  // }
+  &__animation-container {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    height: 288px;
+    background-color: rgba(102, 221, 141, 1);
+    border-radius: 50% 0 0 50%;
+    filter: blur(110px);
+    // opacity: 0%;
+    transition: all 1s;
+  }
   
   // &__animation-container:hover {
   //   opacity: 100%;

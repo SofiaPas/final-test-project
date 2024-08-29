@@ -2,17 +2,16 @@
   
   &__wrapper {
     background-image: image-set(
-      url("/images/feedback-page/clouds-img@1X.png") 1x,
-      url("/images/feedback-page/clouds-img@2X.png") 2x,
-      url("/images/feedback-page/clouds-img@1X.webp") 1x,
-      url("/images/feedback-page/clouds-img@2X.webp") 2x
+      url("/images/feedback-page/clouds@1X.png") 1x,
+      url("/images/feedback-page/clouds@2X.png") 2x,
+      url("/images/feedback-page/clouds@1X.webp") 1x,
+      url("/images/feedback-page/clouds@2X.webp") 2x
     );
     background-repeat: no-repeat;
+    background-position: -550px 0;
   }
 
   &__content {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
     padding: 120px 2.5vw 100px 2.5vw;
     display: flex;
     gap: 2.5vw;

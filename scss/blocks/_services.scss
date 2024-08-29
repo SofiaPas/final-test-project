@@ -10,10 +10,11 @@
   //   content: url("/images/services-page/Frame.svg");
   //   display: inline-block;
   //   position: absolute;
-  //   top: 135px;
-  //   left: 635px;
-  //   width: 570px;
-  //   height: 366px;
+  //   top: 30px;
+  //   right: 0px;
+  //   // left: 635px;
+  //   // width: 570px;
+  //   // height: 366px;
   // }
 
   &__animation-container {
@@ -51,7 +52,9 @@
     margin: 0;
     margin-top: -30px;
     margin-bottom: 99px;
-    min-width: fit-content;
+    margin-left: 30px;
+    margin-right: 30px;
+    // min-width: fit-content;
   }
 
   &__card-box {
@@ -73,6 +76,17 @@
   &__card-box:last-child {
     flex: 1; 
   }
+
+  // &__card-box:last-child::after {
+  //   content: url("/images/services-page/Frame.svg");
+  //   display: inline-block;
+  //   position: absolute;
+  //   top: 25px;
+  //   right: 0px;
+  //   // left: 635px;
+  //   // width: 570px;
+  //   // height: 366px;
+  // }
   
   &__card {
     display: grid;
