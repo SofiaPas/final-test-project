@@ -135,7 +135,7 @@
     &__section-header {
       margin-left: 0;
       margin-bottom: 0;
-      font-size: 48px;
+      font-size: clamp(48px, 6vw, 80px);
     }
 
     &__serv-list {
