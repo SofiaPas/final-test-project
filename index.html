@@ -91,51 +91,55 @@
       <section class="services" id="services">
         <div class="services__content">
           <div class="services__animation-container"></div>
-          <div class="services__decorative-container">
+          <div class="services__wrapper">
             <h2 class="base-title services__section-header">Services</h2>
-            <ul class="services__serv-list">
-
-              <li class="services__card-box">
-                <div class="services__card">
-                  <img src="/images/services-page/Data.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
-                  <h3 class="base-title services__card-title">Cloud based development</h3>
-                  <p class="services__card-descr">Develop an app for your project: web 
-                    and mobile apps for your custom business needs on Amazon Web Services, Google Cloud Platform  or your private cloud.
-                  </p>
-                  <a href="#requestForm">
-                    <button class="base-btn services__btn services__btn-first" type="button">Send a request</button>
-                  </a>
-                </div>
-              </li>
-
-              <li class="services__card-box">
-                <div class="services__card">
-                  <img src="/images/services-page/Window-code-block.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
-                  <h3 class="base-title services__card-title">Remote development teams</h3>
-                  <p class="services__card-descr">Manage and improve your services with
-                    a dedicated development team that covers all functions. You only need to define the tasks and priorities, we are doing the rest.
-                  </p>
-                  <a href="#requestForm">
-                    <button class="base-btn services__btn services__btn-second" type="button">Send a request</button>
-                  </a>
-                </div>
-              </li>
-
-              <li class="services__card-box">
-                <div class="services__card">
-                  <img src="/images/services-page/Clock.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
-                  <h3 class="base-title services__card-title services__card-title-third">Infrastructure management</h3>
-                  <p class="services__card-descr services__card-descr-third">We monitor your services
-                    and keep them running 24/7
-                  </p>
-                  <a href="#requestForm">
-                    <button class="base-btn services__btn services__btn-third" type="button">Send a request</button>
-                  </a>
-                </div>
-              </li>
-
-            </ul>
+            <picture class="services__decor-wrapper">
+              <source srcset="/images/services-page/frame-mobile.svg" media="(orientation: portrait)" type="image/svg+xml" class="services__decor-element">
+              <img src="images/services-page/Frame.svg" alt="" width="493" height="366" class="services__decor-element">
+            </picture>
           </div>
+          <ul class="services__serv-list">
+
+            <li class="services__card-box">
+              <div class="services__card">
+                <img src="/images/services-page/Data.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
+                <h3 class="base-title services__card-title">Cloud based development</h3>
+                <p class="services__card-descr">Develop an app for your project: web 
+                  and mobile apps for your custom business needs on Amazon Web Services, Google Cloud Platform  or your private cloud.
+                </p>
+                <a href="#requestForm">
+                  <button class="base-btn services__btn services__btn-first" type="button">Send a request</button>
+                </a>
+              </div>
+            </li>
+
+            <li class="services__card-box">
+              <div class="services__card">
+                <img src="/images/services-page/Window-code-block.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
+                <h3 class="base-title services__card-title">Remote development teams</h3>
+                <p class="services__card-descr">Manage and improve your services with
+                  a dedicated development team that covers all functions. You only need to define the tasks and priorities, we are doing the rest.
+                </p>
+                <a href="#requestForm">
+                  <button class="base-btn services__btn services__btn-second" type="button">Send a request</button>
+                </a>
+              </div>
+            </li>
+
+            <li class="services__card-box">
+              <div class="services__card">
+                <img src="/images/services-page/Clock.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
+                <h3 class="base-title services__card-title services__card-title-third">Infrastructure management</h3>
+                <p class="services__card-descr services__card-descr-third">We monitor your services
+                  and keep them running 24/7
+                </p>
+                <a href="#requestForm">
+                  <button class="base-btn services__btn services__btn-third" type="button">Send a request</button>
+                </a>
+              </div>
+            </li>
+
+          </ul>
         </div>
       </section>
 
