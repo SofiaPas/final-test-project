@@ -1,5 +1,6 @@
 .feedback {
-  
+  container-type: inline-size;
+
   &__wrapper {
     background-image: image-set(
       url("/images/feedback-page/clouds@1X.png") 1x,
@@ -32,7 +33,7 @@
     margin: 0;
     font-size: clamp(35px, 5.3vw, 66px);
     line-height: 0.9;
-    margin-bottom: 32px;
+    margin-bottom: 2.6vw;
   }
   
   &__cont-phone {
@@ -42,9 +43,19 @@
   &__section-header {
     font-size: clamp(75px, 10.7vw, 130px);
     line-height: 0.9;
-    margin-bottom: 64px;
+    margin-bottom: 5.3vw;
   }
 
+  @container (width <= 1000px) {
+    &__content {
+     flex-direction: column;
+     max-width: max-content;
+    }
+
+    &__section-header {
+      display: none;
+    }
+  }
 
   @media only screen and (orientation: portrait) {
     &__section-header {
@@ -55,7 +66,6 @@
       max-width: fit-content;
       margin: 0 auto;
       margin-top: 53px;
-      display: flex;
       flex-direction: column;
       padding: 0;
       padding-bottom: 33px;

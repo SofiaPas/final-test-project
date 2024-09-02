@@ -6,7 +6,7 @@
 
 .about {
   position: relative;
-  --anim-width: 1139px;
+  --anim-width: clamp(500px,  85vw, 1139px);
   --anim-height: calc(var(--anim-width) / 3.14);
   --anim-mob-width: clamp(288px, 40vw, 650px);
   --anim-mob-height: calc(var(--anim-mob-width) / 1.8);
@@ -17,36 +17,15 @@
     display: grid;
   }
 
-  // &__decorative-container::before {
-  //   content: url("/images/about-us-page/Frame.svg");
-  //   display: inline-block;
-  //   position: absolute;
-  //   top: 416px;
-  //   left: 673px;
-  //   width: 236.48px;
-  //   height: 497.44px;
-  // }
-
-  // &__decorative-container::after {
-  //   content: url("/images/about-us-page/Frame2.svg");
-  //   display: inline-block;
-  //   position: absolute;
-  //   top: 471px;
-  //   left: 646px;
-  //   width: 236.48px;
-  //   height: 497.44px;
-  //   z-index: -1;
-  // }
-
-  &__image-wrapper {
+  &__image-container {
     position: relative;
-    width: clamp(500px,  85vw, 1139px);
+    width: var(--anim-width);
     height: var(--anim-height);
     margin: 0 auto;
     margin-top: 120px;
   }
 
-  &__image-container {
+  &__image {
     position: relative;
     width: 100%;
     height: 100%;
@@ -62,7 +41,7 @@
     border-radius: 220px;
   }
 
-  &__image-container::before {
+  &__image::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -72,14 +51,14 @@
     z-index: 1;
   }
 
-  &__image-container::after {
+  &__image::after {
     position: absolute;
     content: "";
     top: 0; left: 0;
     z-index: -1;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
     filter: blur(calc(var(--anim-height) / 9));
     background-image: linear-gradient(var(--rotate), rgba(49, 91, 239, 1), rgba(102, 221, 141, 1));
     animation: spin 2.5s linear infinite;
@@ -95,25 +74,63 @@
     }
   }
 
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto 1fr;
+    row-gap: 24px;
+    margin: 0 30px;
+    margin-bottom: 100px;
+  }
+
+  &__decor-wrapper {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1/-1;
+    width: clamp(260px, 39vw, 550px);
+  }
+
+  &__decor-element {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -10;
+  }
+
+  &__decor-element:nth-child(2) {
+    right: 30px;
+  }
+
+  &__decor-element:last-child {
+    top: -50px;
+  }
+
   &__title {
+    grid-column: 1/-1;
+    grid-row: 1;
     font-size: clamp(55px, 5.3vw, 64px);
     line-height: 0.9;
-    margin: -15px 0px 24px 124px;
+    margin: -15px 0px 0px 124px;
     max-width: 70vw;
     position: relative;
     z-index: 2;
   }
 
   &__main-text {
-    margin: 0 0px 20px 124px;
-    max-width: 50vw;
-    min-width: 288px;
+    grid-column: 1/-1;
+    grid-row: 2;
+    margin: 0 0px 0px 124px;
+    max-width: 40vw;
+  }
+
+  &__btn-container {
+    grid-column: 1;
+    grid-row: 3;
   }
 
   &__btn {
     margin-left: 124px;
-    margin-top: 12px;
-    margin-bottom: 100px;
+    margin-top: 8px;
   }
 
 
@@ -123,24 +140,34 @@
       min-width: 288px;
     }  
 
-    // &__decorative-container::before {
-    //   content: url("/images/about-us-page/Frame-mobile.svg");
-    //   top: 25px;
-    //   left: 300px;
-    //   width: auto;
-    //   height: auto;
-    // }  
-    
-    &__decorative-container::after {
-      display: none;
-    }
-
-    &__image-wrapper {
+    &__image-container {
       width: clamp(288px, 65vw, 650px);
       height: var(--anim-mob-height);
       margin-top: 56px;
     }
 
+    &__wrapper {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto 1fr;
+      row-gap: 24px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  
+    &__decor-wrapper {
+      grid-row: 1/-1;
+      width: 24px;
+    }
+  
+    &__decor-element {
+      top: -50px;
+      left: 10px;
+    }
+  
+    &__decor-element:nth-child(2) {
+      display: none;
+    }
+    
     &__title {
       font-size: 32px;
       margin: 24px 0 0 0;
@@ -148,11 +175,17 @@
     }
 
     &__main-text {
-      margin: 24px 0 0 0;
+      grid-column: 1/-1;
+      margin: 0px 0 0 0;
+      max-width: fit-content;
+    }
+
+    &__btn-container {
+      grid-column: 1/-1;
     }
 
     &__btn {
-      margin: 24px 0 20px 0;
+      margin: 0px 0 0px 0;
     }
   }
 }

@@ -1,5 +1,5 @@
 .services {
-  position: relative;
+  container-type: inline-size;
 
   &__content {
     max-width: 1200px;
@@ -16,43 +16,45 @@
     background-color: rgba(102, 221, 141, .5);
     border-radius: 50%;
     filter: blur(100px);
-    // opacity: 0%;
-    transition: all 1s;
   }
   
-  // &__animation-container:hover {
-  //   opacity: 100%;
-  // }
-
   &__wrapper {
+    position: absolute;
+    top: -50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: -280px;
+    grid-template-columns: 1fr auto;
+    column-gap: 90px;
   }
-
+  
   &__decor-wrapper {
-    display: flex;
-    justify-content: end;
+    width: clamp(300px, 40vw, 550px);
+    padding-top: 30px;
   }
-
+  
+  &__decor-element {
+    width: 100%;
+    height: auto;
+  }
+  
   &__section-header {
     position: relative;
     margin-left: 120px;
     z-index: 5;
-    width: max-content;
-    font-size: clamp(80px, 10.7vw, 130px);
+    font-size: clamp(75px, 10.7vw, 130px);
     line-height: 0.9;
   }
 
   &__serv-list {
+    position: relative;
     display: flex;
     gap: 8px;
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-top: 36px;
     margin-bottom: 99px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
   }
 
   &__card-box {
@@ -72,20 +74,20 @@
   }
 
   &__card-box:last-child {
-    flex: 1; 
+    flex: 1;
   }
 
   &__card {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
-    gap: 24px;
-    padding: 30px;
+    gap: 30px;
+    padding: 24px;
     border-radius: 24px;
     background: var(--serv-card-bg-color);
   }
   
   &__card-img {
-    margin-bottom: 71px;
+    margin-bottom: 60px;
   }
   
   &__card-title {
@@ -95,10 +97,11 @@
   }
   
   &__card-descr {
+    min-width: min-content;
     margin: 0;
   }
 
-  &__card-descr-third {
+  &__card-box:last-child &__card-descr {
     margin-bottom: 41px;
   }
 
@@ -107,6 +110,24 @@
     text-wrap: nowrap;
   }
 
+  @container (width <= 750px) {
+    &__wrapper {
+      margin-bottom: -180px;
+      column-gap: 10vw;
+    }
+
+    &__section-header {
+      margin-left: 50px;
+    }
+
+    &__serv-list {
+      flex-direction: column;
+    }
+
+    &__card {
+      width: 100%;
+    }
+  }
 
   @media only screen and (orientation: portrait) {
     &__content {
@@ -116,20 +137,22 @@
 
     &__wrapper {
       position: relative;
+      top: 0;
+      margin-bottom: -95px;
       grid-template-columns: auto 1fr;
+      column-gap: 0;
       min-width: 288px;
-      margin-bottom: -110px;
       margin-top: 36px;
     }
 
     &__decor-wrapper {
-      justify-content: start;
+      width: clamp(115px, 11vw, 150px);
+      padding-top: 10px;
     }
 
     &__decor-element {
       width: 100%;
-      min-width: min-content;
-      height: 100%;
+      height: auto;
     }
 
     &__section-header {
@@ -140,7 +163,6 @@
 
     &__serv-list {
       flex-direction: column;
-      justify-content: stretch;
       gap: 24px;
       margin-left: 0;
       margin-right: 0;
@@ -169,7 +191,7 @@
       margin-bottom: 32px;
     }
     
-    &__card-descr-third {
+    &__card-box:last-child &__card-descr {
       margin-bottom: unset;
     }
   }

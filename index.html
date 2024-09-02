@@ -12,7 +12,6 @@
     <title>Final Project</title>
   </head>
   <body class="body">
-    <div class="main-container">
 
       <section class="header">
         <div class="header__wrapper">
@@ -57,13 +56,13 @@
             <div class="header__lower-part">
               <h1 class="base-title header__title">Cloud software development</h1>
               <div class="header__features-block">
-                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark header__feature-line-1">
-                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark header__feature-line-2">
-                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark header__feature-line-3">
+                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark">
+                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark">
+                <img src="images/head-page/check-mark.svg" alt="check-mark" width="24" height="24" class="header__check-mark">
                 <ul class="header__features-list">
-                  <li class="header__feature-item header__feature-line-1">Websites, mobile applications</li>
-                  <li class="header__feature-item header__feature-line-2">Remote development teams</li>
-                  <li class="header__feature-item header__feature-line-3">Cloud Infrastructure Management </li>
+                  <li class="header__feature-item">Websites, mobile applications</li>
+                  <li class="header__feature-item">Remote development teams</li>
+                  <li class="header__feature-item">Cloud Infrastructure Management </li>
                 </ul>
               </div>
               <a href="#requestForm">
@@ -76,15 +75,21 @@
 
       <section class="about" id="about">
         <div class="about__content">
-          <div class="about__decorative-container"></div>
-          <div class="about__image-wrapper">
-            <div class="about__image-container"></div>
+          <div class="about__image-container">
+            <div class="about__image"></div>
           </div>
-          <h2 class="base-title about__title">Basic marketing information <span class="green-part">about the company</span></h2>
-          <p class="about__main-text">Basic marketing info about the company: We deliver customized cloud based solutions for your ideas. 20 years of high performance cloud based development experience (that’s my experience incl. Google and Gemini).</p>
-          <a href="#requestForm">
-            <button class="base-btn about__btn" type="button">Send a request</button>
-          </a>
+          <div class="about__wrapper">
+            <h2 class="base-title about__title">Basic marketing information <span class="green-part">about the company</span></h2>
+            <p class="about__main-text">Basic marketing info about the company: We deliver customized cloud based solutions for your ideas. 20 years of high performance cloud based development experience (that’s my experience incl. Google and Gemini).</p>
+            <a href="#requestForm" class="about__btn-container">
+              <button class="base-btn about__btn" type="button">Send a request</button>
+            </a>
+            <picture class="about__decor-wrapper">
+              <source srcset="images/about-us-page/Frame-mobile.svg" media="(orientation: portrait)" type="image/svg+xml" class="about__decor-element">
+              <img src="images/about-us-page/Frame.svg" width="497" height="236" alt="" class="about__decor-element">
+              <img src="images/about-us-page/Frame2.svg" width="497" height="236" alt="" class="about__decor-element">
+            </picture>
+          </div>
         </div>
       </section>
 
@@ -108,7 +113,7 @@
                   and mobile apps for your custom business needs on Amazon Web Services, Google Cloud Platform  or your private cloud.
                 </p>
                 <a href="#requestForm">
-                  <button class="base-btn services__btn services__btn-first" type="button">Send a request</button>
+                  <button class="base-btn services__btn" type="button">Send a request</button>
                 </a>
               </div>
             </li>
@@ -121,7 +126,7 @@
                   a dedicated development team that covers all functions. You only need to define the tasks and priorities, we are doing the rest.
                 </p>
                 <a href="#requestForm">
-                  <button class="base-btn services__btn services__btn-second" type="button">Send a request</button>
+                  <button class="base-btn services__btn" type="button">Send a request</button>
                 </a>
               </div>
             </li>
@@ -129,12 +134,12 @@
             <li class="services__card-box">
               <div class="services__card">
                 <img src="/images/services-page/Clock.svg" alt="Database img" width="48" height="48" class="services__card-img" loading="lazy">
-                <h3 class="base-title services__card-title services__card-title-third">Infrastructure management</h3>
+                <h3 class="base-title services__card-title">Infrastructure management</h3>
                 <p class="services__card-descr services__card-descr-third">We monitor your services
                   and keep them running 24/7
                 </p>
                 <a href="#requestForm">
-                  <button class="base-btn services__btn services__btn-third" type="button">Send a request</button>
+                  <button class="base-btn services__btn" type="button">Send a request</button>
                 </a>
               </div>
             </li>
@@ -274,6 +279,5 @@
           </div>
         </div>
       </section>
-    </div>
   </body>
 </html>

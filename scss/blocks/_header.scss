@@ -107,10 +107,22 @@
   }
 
   &__check-mark {
-    width: 100%;
+    width: auto;
     height: auto;
   }
 
+  &__check-mark:nth-child(1) {
+    grid-row: 1/2;
+  }
+
+  &__check-mark:nth-child(2) {
+    grid-row: 2/3;
+  }
+
+  &__check-mark:nth-child(3) {
+    grid-row: 3/4;
+  }
+  
   &__features-list {
     display: grid;
     grid-template-rows: repeat(3, 24px);
@@ -120,18 +132,6 @@
     padding: 0;
   }
 
-  &__feature-line-1 {
-    grid-row: 1/2;
-  }
-
-  &__feature-line-2 {
-    grid-row: 2/3;
-  }
-
-  &__feature-line-3 {
-    grid-row: 3/4;
-  }
-
   &__btn {
     margin-top: 32px;
   }
@@ -139,8 +139,6 @@
 
   @media only screen and (orientation: portrait) {
     &__content {
-      // display: flex;
-      // flex-direction: column;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(1, auto 1fr);
@@ -154,7 +152,6 @@
 
     &__main-menu {
       margin-bottom: 221px;
-      // margin-bottom: auto;
       margin-left: 0;
       margin-right: 0;
       padding-left: 16px;
@@ -201,7 +198,6 @@
 
     &__lower-part {
       margin: 0 auto;
-      // margin-top: auto;
     }
 
     &__title {
