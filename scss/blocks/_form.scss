@@ -176,7 +176,6 @@
 
 
   @media only screen and (orientation: portrait) {
-    & {
       margin: 0 auto;
       flex: unset;
       justify-content: flex-start;
@@ -185,7 +184,6 @@
       align-items: center;
       border-radius: 24px;
       padding: 16px;
-    }
     
     &__title {
       font-size: 32px;
